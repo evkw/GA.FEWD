@@ -13,6 +13,23 @@
     src: url('../assets/fonts/lato/Lato-BoldItalic.ttf');
 }
 
+ul.list {
+    width: 100%;
+}
+
+ul.list > li {
+    text-align: left;
+    font-family: 'Lato-regular';
+    font-size: 1em;
+    padding: 1.25% 0;
+}
+
+ul.sub-list > li {
+    list-style-type: circle;
+    font-family: 'Lato-regular';
+    font-size: 0.75em;
+}
+
 /* TITLE */
 #title .branding {
     border-top: 2px solid white;
@@ -44,4 +61,58 @@
     font-size: 0.5em;
     font-family: 'Lato-Bold-Italic', Fallback, sans-serif;
     color: white;
+}
+
+/* DETAIL */
+section.detail-slide > * {
+    font-family: 'Lato', Fallback, sans-serif;
+    text-align: left;
+}
+
+section.detail-slide > h1 {
+    font-size: 1.75em;
+}
+
+section.detail-slide > .sub-title {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    text-transform: uppercase;
+}
+
+/* TOPIC */ 
+
+section.topic {
+    justify-content: center;
+    align-items: center;
+}
+
+section.topic > h1 {
+   color: #fff;
+   font-family: 'Lato';
+   text-transform: uppercase;
+   padding: 150px 0;
+}
+
+/* EXERCISE */
+section.detail-slide .exercise {
+    display: flex;
+    height: 100%;
+}
+
+section.detail-slide .exercise .instructions {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid gray;
+    height: 80%;
+    margin: 25px 0;
+}
+
+section.detail-slide .exercise .instructions ol {
+    padding:3%
+}
+
+section.detail-slide .exercise .instructions ol li {
+    font-family: 'Lato-regular';
+    font-size:0.75em;
+    padding: 1.5% 0;
 }

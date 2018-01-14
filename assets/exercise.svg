@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(0.923659,0,0,0.968178,-55.306,-54.81)">
+        <ellipse cx="103.183" cy="97.926" rx="41.697" ry="40.53" style="fill:rgb(71,238,212);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-60,-60.7841)">
+        <path d="M136.936,89.64C136.936,89.64 111.914,63.766 111.582,63.352C111.251,62.937 115.063,83.532 136.936,89.64Z" style="fill:rgb(174,248,234);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-60,-60.7841)">
+        <path d="M111.563,63.346L136.936,89.64C137.547,89.58 132.22,69.604 111.563,63.346" style="fill:white;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,-50.4357,-46.827)">
+        <text x="68.539px" y="109.38px" style="font-family:'Impact', sans-serif;font-stretch:condensed;font-size:12px;fill:white;">EXERCISE</text>
+    </g>
+</svg>
