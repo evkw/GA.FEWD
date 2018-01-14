@@ -1,0 +1,12 @@
+/* Remove some of the revealjs defaults */
+
+.reveal section img {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.reveal section img.img-std {
+    box-shadow: none;
+    border:none;
+}

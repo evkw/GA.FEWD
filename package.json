@@ -1,0 +1,14 @@
+{
+  "name": "fewd",
+  "version": "1.0.0",
+  "description": "Slides for FEWD prepared by Evan Wallace",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "author": "Evan Wallace",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}
