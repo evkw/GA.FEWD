@@ -13,6 +13,8 @@
     src: url('../assets/fonts/lato/Lato-BoldItalic.ttf');
 }
 
+
+
 ul.list {
     width: 100%;
 }
@@ -22,6 +24,14 @@ ul.list > li {
     font-family: 'Lato-regular';
     font-size: 1em;
     padding: 1.25% 0;
+}
+
+ul.list.small {
+    font-size: 0.5em;
+}
+
+ul.list.small > li {
+    padding: 0;
 }
 
 ul.sub-list > li {
@@ -114,5 +124,5 @@ section.detail-slide .exercise .instructions ol {
 section.detail-slide .exercise .instructions ol li {
     font-family: 'Lato-regular';
     font-size:0.75em;
-    padding: 1.5% 0;
+    padding: 1% 0;
 }

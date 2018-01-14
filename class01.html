@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <div class="reveal">
         <div class="slides">
             <section id="title" data-background-color="black">
@@ -28,7 +27,7 @@
                 <h1>AGENDA</h1>
                 <ul class="list">
                     <li>Review Github basics - 15 min</li>
-                    <li>Review HTML Tags and CSS Selectors - 10 min</li>
+                    <li>Review HTML Tags - 10 min</li>
                     <li>HTML Structure + GA Press Release Exercise - 60 min</li>
                     <li>External CSS + Styling GA Press Release Exercise - 60 min</li>
                     <li>Lab time - 50 min</li>
@@ -95,11 +94,61 @@
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
-                <h1>HTML Tags and css selectors</h1>
+                <h1>HTML Tags review</h1>
             </section>
 
-            <section class="topic" data-background-color="#1EC9C6">
-                <h1>HTML structure</h1>
+            <section class="detail-slide">
+                <div class="sub-title">HTML Syntax</div>
+                <img src="assets/class01/html-tags.png" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">HTML Syntax</div>
+                <img src="assets/class01/tags_attributes.png" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Heading Elements</div>
+                <pre>
+                <code><h1>Largest Heading</h1></code>
+                <code><h2>...</h2></code>
+                <code><h3>...</h3></code>
+                <code><h4>...</h4></code>
+                <code><h5>...</h5></code>
+                <code><h6>Smallest Heading</h6></code>
+                </pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Text Elements</div>
+                <pre>
+                    <code><p>This is a paragraph</p></code>
+                    <code><code>Text styled to indicate it is computer code</code></code>
+                </pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Unordered List</div>
+                <pre>
+                <code>
+                <ul>
+                    <li>First Item</li>
+                    <li>Second Item</li>
+                </ul>
+                </code>
+                </pre>
+                <ul class="list">
+                    <li>First Item</li>
+                    <li>Second Item</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Links</div>
+                <pre>
+                    <code><a href="www.google.com">Google</a></code>
+                </pre>
+                <a href="www.google.com">Google</a>
             </section>
 
             <section class="detail-slide">
@@ -108,7 +157,75 @@
                     <img src="assets/exercise.svg" />
                     <div class="instructions">
                         <ol>
-                            <li>Notes</li>
+                            <li>Download
+                                <a href="assets/class01/exercises/ga_press_release.zip">starter code</a>
+                            </li>
+                            <li>Open
+                                <pre><code>ga_press_release.txt</code></pre>
+                            </li>
+                            <li>Open a new
+                                <a href="www.codepen.io">Codepen</a>
+                            </li>
+                            <li>Translate the text file into HTML elements</li>
+                            <li>DONT CLOSE THE CODEPEN!!</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>HTML structure</h1>
+            </section>
+
+            <section class="detail-slide" data-markdown="assets/class01/markdown/html-structure.md"></section>
+
+            <section class="detail-slide">
+                <div class="sub-title">doctype</div>
+                <ul class="list">
+                    <li>ALl modern websites should use &lt;!DOCTYPE html&gt;</li>
+                    <li>Represents HTML5 (the latest version of html)</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">head</div>
+                <ul class="list">
+                    <li>External CSS should be linked here</li>
+                    <li>Contains title for the website</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">body</div>
+                <ul class="list">
+                    <li>Visible part of the website</li>
+                    <li>All the tags weve talked about till now go in here</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">DOM - Document Object Model</div>
+                <!-- TODO: Create image to display DOM -->
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">ACTIVITY: GA Press release Pt 2</div>
+                <div class="exercise">
+                    <img src="assets/exercise.svg" />
+                    <div class="instructions">
+                        <ol>
+                            <li>Create a folder on your desktop called 'Ga Press Release'</li>
+                            <li>Open folder in sublime</li>
+                            <li>Copy the contents of the codepen from previous exercise</li>
+                            <li>Save as index.html</li>
+                            <li>Structure the html document and be sure to include</li>
+                            <ul class="list small">
+                                <li>&lt;!DOCTYPE html&gt;</li>
+                                <li>&lt;html&gt;</li>
+                                <li>&lt;head&gt;</li>
+                                <li>&lt;title&gt;</li>
+                                <li>&lt;body&gt;</li>
+                            </ul>
                         </ol>
                     </div>
                 </div>
@@ -119,21 +236,81 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">ACTIVITY: Add Styles to GA Press release</div>
+                Structure of CSS
+            </section>
+
+            <section class="detail-slide">
+                Example of how to apply to html
+            </section>
+
+            <section class="detail-slide">
+                Example of some css and how it looks when rendered
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">ACTIVITY: GA Press release Pt 3</div>
                 <div class="exercise">
                     <img src="assets/exercise.svg" />
                     <div class="instructions">
                         <ol>
-                            <li>Notes</li>
+                            <li>Go back to sublime and reopen 'Ga Press Release'</li>
+                            <li>Create a new file</li>
+                            <li>Save as style.css</li>
+                            <li>Link style.css to index.html</li>
+                            <li>Add the following styles</li>
+                            <ul class="list small">
+                                <li></li>
+                                <li>&lt;html&gt;</li>
+                                <li>&lt;head&gt;</li>
+                                <li>&lt;title&gt;</li>
+                                <li>&lt;body&gt;</li>
+                            </ul>
                         </ol>
                     </div>
                 </div>
             </section>
 
+
+
             <section class="topic" data-background-color="#F33938">
                 <h1>lab time</h1>
             </section>
 
+            <section class="detail-slide">
+                <div class="sub-title">ACTIVITY: Cooke Recipe</div>
+                <div class="exercise">
+                    <img src="assets/exercise.svg" />
+                    <div class="instructions">
+                        <ol>
+                            <li>Download
+                                <a href="assets/class01/exercises/cooke-recipe.zip">starter code</a>
+                            </li>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" data-background-color="black">
+                <h1>Wrap up</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">homework</div>
+                <ul class="list">
+                    <li></li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Next week</div>
+                <h4>Class 2 of 20 - CSS Basics </h4>
+                <ul class="list">
+                    <li>Introduction to CSS</li>
+                    <li>Common CSS Properties</li>
+                    <li>Start making your portfolio!</li>
+                </ul>
+            </section>
         </div>
     </div>
 
