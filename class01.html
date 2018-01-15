@@ -5,9 +5,10 @@
     <title>FEWD: Class 01</title>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/white.css" id="theme">
-    <link rel="stylesheet" href="css/zenburn.css"/>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/zenburn.css" />
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 </head>
 
@@ -42,28 +43,24 @@
                     <li>Meeting each other</li>
                     <li>Review HTML Tags</li>
                     <li>HTML Structure + GA Press Release Exercise</li>
-                    <li>External CSS + Styling GA Press Release Exercise</li>
+                    <li>Review CSS + Styling GA Press Release Exercise</li>
                     <li>Lab time</li>
                 </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">introductions: instructional team</div>
+                <div class="sub-title">introductions: Who am i?</div>
                 <ul class="list">
                     <li>Evan Wallace</li>
                     <ul class="sub-list">
                         <li>Senior Software Developer @ Berkley Insurance</li>
-                        <li>wallace_evan10@hotmail.com</li>
-                    </ul>
-                    <li>Student Services</li>
-                    <ul class="sub-list">
-                        <li>Get info for this</li>
+                        <li>Teacher and presenter</li>
                     </ul>
                 </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">introductions: students</div>
+                <div class="sub-title">introductions: Who are you?</div>
                 <ul class="list">
                     <li>Your name?</li>
                     <li>What you do?</li>
@@ -116,6 +113,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Unordered List</div>
+                <p class="normal">Some elements have nested elements</p>
                 <pre>
                 <code>
                 <ul>
@@ -132,6 +130,8 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Links</div>
+                <p class="normal">Some elements have attributes</p>
+                <p class="normal">Not all attributes have values</p>
                 <pre class="html">
                     <code><a href="www.google.com">Google</a></code>
                 </pre>
@@ -162,7 +162,7 @@
                                 <a href="www.codepen.io">Codepen</a>
                             </li>
                             <li>Translate the text file into HTML elements</li>
-                            <li>DONT CLOSE THE CODEPEN!!</li>
+                            <li>Dont close the code pen</li>
                         </ol>
                     </div>
                 </div>
@@ -172,35 +172,14 @@
                 <h1>HTML structure</h1>
             </section>
 
-            <section class="detail-slide" data-markdown="assets/class01/markdown/html-structure.md"></section>
-
-            <section class="detail-slide">
-                <div class="sub-title">doctype</div>
-                <ul class="list">
-                    <li>ALl modern websites should use &lt;!DOCTYPE html&gt;</li>
-                    <li>Represents HTML5 (the latest version of html)</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">head</div>
-                <ul class="list">
-                    <li>External CSS should be linked here</li>
-                    <li>Contains title for the website</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">body</div>
-                <ul class="list">
-                    <li>Visible part of the website</li>
-                    <li>All the tags weve talked about till now go in here</li>
-                </ul>
+            <section class="detail-slide" >
+                <div class="sub-title">Html Structure</div>
+                <img src="assets/class01/html-structure.png"/>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">DOM - Document Object Model</div>
-                <!-- TODO: Create image to display DOM -->
+                <img src="assets/class01/dom-example.png" />
             </section>
 
             <section class="detail-slide">
@@ -227,19 +206,61 @@
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
-                <h1>external css</h1>
+                <h1>CSS REVIEW</h1>
             </section>
 
             <section class="detail-slide">
-                Structure of CSS
+                <div class="sub-title">CSS review</div>
+                <ul class="list">
+                    <li>Series of rules that apply styles to html elements</li>
+                    <li>Each rule is made up of declarations</li>
+                    <li>Declarations are made up of properties and values</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
-                Example of how to apply to html
+                <div class="sub-title">Structure of CSS</div>
+                <img src="assets/class01/css-review01.png" />
             </section>
 
             <section class="detail-slide">
-                Example of some css and how it looks when rendered
+                <div class="sub-title">Structure of CSS</div>
+                <img src="assets/class01/css-review02.png" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Structure of CSS</div>
+                <img src="assets/class01/css-review03.png" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Structure of CSS</div>
+                <img src="assets/class01/css-review04.png" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Structure of CSS</div>
+                <img src="assets/class01/css-review05.png" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">CSS Selectors</div>
+                <img src="assets/class01/css-selectors.png" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">External CSS</div>
+                <ul class="list">
+                    <li>Seperates css from html</li>
+                    <li>Can reuse css across multiple html files</li>
+                    <li>Much easier to maintain</li>
+                    <li>Greater text editor support</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">How to apply external css</div>
+                <img src="assets/class01/css-external.png" />
             </section>
 
             <section class="detail-slide">
@@ -254,18 +275,14 @@
                             <li>Link style.css to index.html</li>
                             <li>Add the following styles</li>
                             <ul class="list small">
-                                <li></li>
-                                <li>&lt;html&gt;</li>
-                                <li>&lt;head&gt;</li>
-                                <li>&lt;title&gt;</li>
-                                <li>&lt;body&gt;</li>
+                                <li>Change colour of title</li>
+                                <li>Change background colour of list</li>
+                                <li>Change colour of current city</li>
                             </ul>
                         </ol>
                     </div>
                 </div>
             </section>
-
-
 
             <section class="topic" data-background-color="#F33938">
                 <h1>lab time</h1>
@@ -288,13 +305,6 @@
 
             <section class="topic" data-background-color="black">
                 <h1>Wrap up</h1>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">homework</div>
-                <ul class="list">
-                    <li></li>
-                </ul>
             </section>
 
             <section class="detail-slide">
