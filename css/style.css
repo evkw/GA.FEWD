@@ -13,8 +13,6 @@
     src: url('../assets/fonts/lato/Lato-BoldItalic.ttf');
 }
 
-
-
 ul.list {
     width: 100%;
 }
@@ -90,7 +88,6 @@ section.detail-slide > .sub-title {
 }
 
 /* TOPIC */ 
-
 section.topic {
     justify-content: center;
     align-items: center;
