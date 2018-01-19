@@ -13,10 +13,8 @@
 </head>
 
 <body>
-
     <div class="reveal">
         <div class="slides">
-
             <section id="title" data-background-color="black">
                 <div class="branding">
                     <img src="assets/general_assembly.png" />
@@ -25,17 +23,244 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title"></div>
+                <div class="sub-title">
+                    Class 2: CSS Basics
+                </div>
                 <h1>Learning Objectives</h1>
                 <ul class="list">
+                    <li>Apply and explain CSS “cascade” including: importance, specificity and inheritance.</li>
+                    <li>Describe the DOM and draw simple DOM tree.</li>
+                    <li>Predict image paths and apply relative paths to img and a tags.</li>
+                    <li>Experiment with margin and border.</li>
                 </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title"></div>
+                <div class="sub-title">
+                    Class 2: CSS Basics
+                </div>
                 <h1>AGENDA</h1>
                 <ul class="list">
+                    <li>Review HTML + CSS Syntax and the DOM</li>
+                    <li>Explore the img element and image types</li>
+                    <li>Explore the anchor tag</li>
+                    <li>Deep dive into CSS</li>
+                    <li>Lab time</li>
                 </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Review HTML + CSS and the DOM</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">HTML review</div>
+                <ul class="list">
+                    <li class="fragment">HTML page is made up of elements</li>
+                    <li class="fragment">Element must have an opening tag</li>
+                    <li class="fragment">An Element may have 0 or many attributes</li>
+                    <li class="fragment">An attribute may have 0 or 1 value</li>
+                    <li class="fragment">An element may have content</li>
+                    <li class="fragment">If an element has content, it must have a closing tag</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">CSS review</div>
+                <ul class="list">
+                    <li class="fragment">Series of rules that apply styles to html elements</li>
+                    <li class="fragment">Each rule is made up of declarations</li>
+                    <li class="fragment">Declarations are made up of properties and values</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">DOM review</div>
+                <ul class="list">
+                    <li class="fragment">DOCTYPE tag</li>
+                    <li class="fragment">html element</li>
+                    <li class="fragment">head element</li>
+                    <li class="fragment">body element</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">DOM - Document Object Model</div>
+                <img src="assets/class01/dom-example.png" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Review Questions</div>
+                <ul class="list">
+                    <li class="fragment">Are HTML Tags upper or lower case?</li>
+                    <li class="fragment">Which element in the DOM is visible to users?</li>
+                    <li class="fragment">Which element do we use to link external CSS?</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>img element</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Image element</div>
+                <img src="assets/class02/html-img-tag.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">src attribute</div>
+                <p class="normal">Tells the browser where to find the image</p>
+                <img src="assets/class02/img-src.png">
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>image types</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Image Types - PNG</div>
+                <ul class="list">
+                    <li>Supports transparency and semi transparency</li>
+                    <li>Great for logos, icons and repeating backgrounds</li>
+                    <li>Not great at for large images</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Image Types - JPG</div>
+                <ul class="list">
+                    <li>Does not support transparency</li>
+                    <li>Has great compression characteristics</li>
+                    <li>Great for large images</li>
+                    <li>Can work with logos but will look less crisp on inspection</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Image Types - GIF</div>
+                <ul class="list">
+                    <li>Supports basic transparency</li>
+                    <li>Supports animations</li>
+                    <li>Has limited colours available</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Image Types - SVG</div>
+                <ul class="list">
+                    <li>My personal favourite lately</li>
+                    <li>Works with vectors instead of raster images</li>
+                    <li>Infinately Scalable</li>
+                    <li>Very small file sizes</li>
+                    <li>Great for logos, icons and repeating backgrounds</li>
+                    <li>Only uses basic shapes so will not be photograph quality</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">ACTIVITY: GA Press release: Images</div>
+                <div class="exercise">
+                    <img src="assets/exercise.svg" />
+                    <div class="instructions">
+                        <ol>
+                            <li>Open index.html in the ga press release folder</li>
+                            <li>Add the GA logo to the top of the page</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>anchor elements</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">anchor element</div>
+                <img src="assets/class02/a-example.png"/>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">ACTIVITY: GA Press release: links</div>
+                <div class="exercise">
+                    <img src="assets/exercise.svg" />
+                    <div class="instructions">
+                        <ol>
+                            <li>Open index.html in the ga press release folder</li>
+                            <li>Create a link to the GA Website at the bottom of the page</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>CSS Colours</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Hex colours</div>
+                <img src="assets/class02/css-color-hex.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Key word colours</div>
+                <img src="assets/class02/css-color-name.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">RGB colours</div>
+                <img src="assets/class02/css-color-rgb.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">RGBa colours</div>
+                <img src="assets/class02/css-color-rgba.png">
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>CSS Selectors</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Element selectors</div>
+                <img src="assets/class02/css-element-selectors.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">ID & Class selectors</div>
+                <img src="assets/class02/css-id-class-selectors.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Contextual</div>
+                <img src="assets/class02/css-contextual-selectors.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Why its called cascading?</div>
+                <p class="normal">More than one rule may apply to an element. Therefore there needs to be a way to determine which rule takes
+                    priority
+                </p>
+                <p class="normal">Each rule is given an specificity number and the rule with the highest specificity is chosen </p>
+                <p class="normal">If two rules have the same specificity, the rule declared last is used</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Calculating Specificity</div>
+                <p class="normal">3 factors are used to calculate specificity</p>
+                <ol class="list">
+                    <li>id</li>
+                    <li>class</li>
+                    <li>element</li>
+                </ol>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Specificity Example</div>
+                <img src="assets/class02/css-specificity.png">
+            </section>
+
+            <section class="topic" data-background-color="#F33938">
+                <h1>lab time</h1>
             </section>
 
             <section class="topic" data-background-color="black">
@@ -43,16 +268,30 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Extra Resources</div>
+                <div class="sub-title">What we covered today</div>
                 <ul class="list">
+                    <li>Image elements and image types</li>
+                    <li>Anchor elements</li>
+                    <li>CSS Colours</li>
+                    <li>CSS Selectors</li>
+                    <li>CSS Inheritence</li>
+                    <li>CSS Specificity</li>
                 </ul>
             </section>
 
+            <section class="topic" data-background-color="#FFD800">
+                <h1>Q & A</h1>
+            </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Next week</div>
+                <div class="sub-title">Next Class</div>
                 <h4> </h4>
                 <ul class="list">
+                    <li>Review week 1</li>
+                    <li>Start thinking about assignment</li>
+                    <li>Introduction to the Box model</li>
+                    <li>More CSS Selectors</li>
+                    <li>Talk about normalize.css and reset.css</li>
                 </ul>
             </section>
 
