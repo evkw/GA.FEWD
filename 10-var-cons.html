@@ -77,7 +77,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">variable declaration</div>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     var age;  // declares a variable names age
     age = 21; // Sets the value of the variable to 21
 
@@ -89,10 +89,10 @@
             <section class="detail-slide">
                 <div class="sub-title">variable re-assignment</div>
                 <ul class="list">
-                        <li>Variable values can change after they are declared</li>
-                        <li>Changing the value is known as 'reassignment'</li>
-                    </ul>
-<pre><code class="hljs">
+                    <li>Variable values can change after they are declared</li>
+                    <li>Changing the value is known as 'reassignment'</li>
+                </ul>
+                <pre><code class="hljs">
     var name = "Jo";  
     name = "Amir" // The variable value has been changed to Amir
 
@@ -106,7 +106,7 @@
                     <li>If they contain multiple words, subsequent words start with an upper case letter</li>
                 </ul>
 
-<pre><code class="hljs">
+                <pre><code class="hljs">
     var numOfStudents = 10;
 
 </code></pre>
@@ -135,24 +135,24 @@
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">strings</div>
-                    <ul class="list">
-                        <li>Stores text</li>
-                        <li>The value is surrounded by quotes</li>
-                    </ul>
-    
-<pre><code class="hljs">
+                <div class="sub-title">strings</div>
+                <ul class="list">
+                    <li>Stores text</li>
+                    <li>The value is surrounded by quotes</li>
+                </ul>
+
+                <pre><code class="hljs">
     "How is the weather today?"
 
     'Warm'
 </code></pre>
-                </section>
+            </section>
 
-    
+
             <section class="detail-slide">
                 <div class="sub-title">strings</div>
                 <p class="normal">Double vs single quoted strings:</p>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     'They "purchased" it'
 
     "It's a beautiful day"
@@ -161,17 +161,17 @@
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">Whats wrong with this string?</div>
-<pre><code class="hljs">
+                <div class="sub-title">Whats wrong with this string?</div>
+                <pre><code class="hljs">
     var result = "They "purchased" it";
 
 </code></pre>
-                </section>
+            </section>
 
             <section class="detail-slide">
                 <div class="sub-title">strings</div>
                 <p class="normal">You are able to add quotation marks by escaping them</p>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     "They /"purchased/" it" //now valid
 
 </code></pre>
@@ -179,7 +179,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">String to number</div>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     var intString = "4";
     var intNumber = parseInt(intString, 10);
     var floatString = "3.14159";
@@ -190,7 +190,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">number to string</div>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     var number = 4;
     number.toString(); //Result is the string value 4
 
@@ -203,7 +203,7 @@
                     <li>Stores numerical data</li>
                     <li>two types: float, int</li>
                 </ul>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     var int = 42;
 
     var float =  3.14159265;
@@ -213,7 +213,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Arithmetic In JavaScript</div>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     var x= 5; // Assign the value 5 to variable x
     var y = 2; // Assign the value 2 to variable y
     var z = x + y; // Set z to x(5) + y(2) so z will be 7
@@ -233,17 +233,14 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Making decisions</div>
-                <ul class="list">
-                    <li>Conditionals are either TRUE or FALSE</li>
-                    <li>Operate the same as booleans</li>
-                </ul>
-<pre><code class="hljs">
-    if (age > 18){
-        document.write("You are an adult");
-    }
-        
-</code></pre>
+                <div class="sub-title">Execution of a program</div>
+                <img src="assets/class10/program.png">
+            </section>
+
+
+            <section class="detail-slide">
+                <div class="sub-title">Execution with Conditionals</div>
+                <img src="assets/class10/program-conditionals.png">
             </section>
 
             <section class="detail-slide">
@@ -259,7 +256,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Are these equal</div>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     10 === 10 //true
     10 === 5 //false
     "hi" === "hi" //true
@@ -270,7 +267,7 @@
             <section class="detail-slide">
                 <div class="sub-title">Logical operators</div>
                 <p class="normal">If statement is the most basic logical operator</p>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     if(condition === true) {  
         //Do cool stuff
     }
@@ -278,10 +275,67 @@
 </code></pre>
             </section>
 
+
+            <section class="detail-slide">
+                <div class="sub-title">Comparison operators</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Operator</td>
+                            <td>Meaning</td>
+                            <td>Example</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>==</td>
+                            <td>Equality</td>
+                            <td>4 == "4"</td>
+                        </tr>
+                        <tr>
+                            <td>===</td>
+                            <td>Strict Equality</td>
+                            <td>4 === "4"</td>
+                        </tr>
+                        <tr>
+                            <td>!=</td>
+                            <td>Inequality</td>
+                            <td>1 != "5" </td>
+                        </tr>
+                        <tr>
+                            <td>!==</td>
+                            <td>Strict Inequality</td>
+                            <td>8 !== 2</td>
+                        </tr>
+                        <tr>
+                            <td>&#60;</td>
+                            <td>Less Than</td>
+                            <td>4 &#60; 5 </td>
+                        </tr>
+                        <tr>
+                            <td>&#60;=</td>
+                            <td>Less than or equal</td>
+                            <td>3 &#60;= 5 </td>
+                        </tr>
+                        <tr>
+                            <td>&#62;</td>
+                            <td>Greater than</td>
+                            <td>2 &#62; 1 </td>
+                        </tr>
+                        <tr>
+                            <td>&#62;=</td>
+                            <td>Greater than or equal</td>
+                            <td>42 &#62;= 21</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+
             <section class="detail-slide">
                 <div class="sub-title">Logical operators</div>
                 <p class="normal">IF ELSE statement will always perform one of the two statements</p>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     if(condition === true) {  
         //Do cool stuff
     } else {
@@ -294,11 +348,11 @@
             <section class="detail-slide">
                 <div class="sub-title">Logical operators</div>
                 <p class="normal">ELSE IF statement are for when there are more then 2 possible code blocks to run</p>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     var topic = "JS";
-    if (topic == "JS") {
+    if (topic === "JS") {
         console.log("You're learning JavaScript");
-    } else if(topic == "JavaScript") {
+    } else if(topic === "JavaScript") {
         console.log("You're still learning JavaScript");
     } else {
         console.log("You're learning something else");
@@ -310,7 +364,7 @@
             <section class="detail-slide">
                 <div class="sub-title">Logical operators</div>
                 <p class="normal">It is possible to test for more than one condtion in the same if block</p>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     if (name == "GA"  && password == "YellowPencil"){
         //Allow access to internet
     }
@@ -319,13 +373,13 @@
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">AND operator</div>
-                    <img src="assets/class10/AND.png">
-                </section>
+                <div class="sub-title">AND operator</div>
+                <img src="assets/class10/AND.png">
+            </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Logical operators</div>
-<pre><code class="hljs">
+                <pre><code class="hljs">
     if (day == "Tuesday"  || day == "Thursday"){
         //We have class today
     }
@@ -334,9 +388,9 @@
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">OR operator</div>
-                    <img src="assets/class10/OR.png">
-                </section>
+                <div class="sub-title">OR operator</div>
+                <img src="assets/class10/OR.png">
+            </section>
 
 
             <section class="detail-slide">
@@ -396,19 +450,19 @@
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script>
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: false,
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
 
-				transition: 'slide',
-				dependencies: [
-					{ src: 'js/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				]
-			});
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
 
-		</script>
+    </script>
 </body>
 
 </html>

@@ -43,6 +43,16 @@ section.detail-slide > p.normal {
     font-size: 1em;
 }
 
+section.detail-slide > table > thead > * {
+    font-family: 'Lato';
+    font-size: 0.75em;
+}
+
+section.detail-slide > table > tbody > * {
+    font-family: 'Lato-regular';
+    font-size: 0.75em;
+}
+
 /* TITLE */
 #title .branding {
     border-top: 2px solid white;
