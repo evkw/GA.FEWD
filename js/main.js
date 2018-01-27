@@ -8,16 +8,7 @@ function initReveal () {
 		progress: true,
 		history: true,
 		center: false,
-
-		transition: 'slide',
-
-		// Optional reveal.js plugins
-		dependencies: [
-			{ src: 'js/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: 'js/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-			{ src: 'js/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-		],
-
+		transition: 'slide'
 	}
 
 	Reveal.initialize(options);
