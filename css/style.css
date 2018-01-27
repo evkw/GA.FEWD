@@ -17,7 +17,7 @@ ul.list {
     width: 100%;
 }
 
-ul.list > li {
+ul.list > li, ol.list > li {
     text-align: left;
     font-family: 'Lato-regular';
     font-size: 1em;
