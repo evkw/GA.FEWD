@@ -26,8 +26,10 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Learning Objectives</div>
-                <li>Explain looping structures and their uses in javascript</li>
-                <li>Identify objects and collections</li>
+                <ul class="list">
+                    <li>Explain looping structures and their uses in javascript</li>
+                    <li>Identify objects and collections</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
@@ -36,6 +38,15 @@
                     <li>Loops and why they are useful</li>
                     <li>Disucss Javascript objects</li>
                     <li>Disucss Javascript arrays</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Review Questions</div>
+                <ul class="list">
+                    <li class="fragment">What are the two multiple conditional statements called?</li>
+                    <li class="fragment">What are the two types of numbers in javascript?</li>
+                    <li class="fragment">How many conditional statements you name?</li>
                 </ul>
             </section>
 
@@ -99,12 +110,12 @@
             <section class="detail-slide">
                 <div class="sub-title">For loop Example</div>
                 <pre><code class="hljs">
-            // Loops from 1 to 10
-            var num = 0;
-           while(num &#62; 10;) {
-               num++;
-               console.log(num);
-           }
+        // Loops from 1 to 10
+        var num = 0;
+        while(num &#62; 10;) {
+            num++;
+            console.log(num);
+        }
           
                 </code></pre>
 
@@ -154,17 +165,17 @@
             <section class="detail-slide">
                 <div class="sub-title">Creating an array</div>
                 <pre><code class="hljs">
-            var emptyArray = [];
-            var randomNumbers = [ 12, 42, 1, 3, 92 ]; 
-            var rainbowColours = ['red', 'orange', 'yellow', 'green'];
-            var superHeroes = [
-                    "Batman",
-                    "Superman",
-                    "Spiderman",
-                    "Wonder woman",
-                    "Black Widow",
-                    "Hulk"
-            ];
+    var emptyArray = [];
+    var randomNumbers = [ 12, 42, 1, 3, 92 ]; 
+    var rainbowColours = ['red', 'orange', 'yellow', 'green'];
+    var superHeroes = [
+            "Batman",
+            "Superman",
+            "Spiderman",
+            "Wonder woman",
+            "Black Widow",
+            "Hulk"
+    ];
               
                 </code></pre>
 
@@ -174,18 +185,18 @@
                 <div class="sub-title">Accessing Elements</div>
                 <pre><code class="hljs">
   
-            var superHeroes = [
-                    "Batman",
-                    "Superman",
-                    "Spiderman",
-                    "Wonder woman",
-                    "Black Widow",
-                    "Hulk"
-            ];
+    var superHeroes = [
+            "Batman",
+            "Superman",
+            "Spiderman",
+            "Wonder woman",
+            "Black Widow",
+            "Hulk"
+    ];
 
-            superHeroes[0] // Batman
-            superHeroes[3] // Wonder woman
-            superHeroes[ superHeroes.length - 1] // Hulk
+    superHeroes[0] // Batman
+    superHeroes[3] // Wonder woman
+    superHeroes[ superHeroes.length - 1] // Hulk
                   
                     </code></pre>
 
@@ -196,18 +207,18 @@
                 <div class="sub-title">Reassigning Elements</div>
                 <pre><code class="hljs">
   
-            var superHeroes = [
-                    "Batman",
-                    "Superman",
-                    "Spiderman",
-                    "Wonder woman",
-                    "Black Widow",
-                    "Hulk"
-            ];
+    var superHeroes = [
+            "Batman",
+            "Superman",
+            "Spiderman",
+            "Wonder woman",
+            "Black Widow",
+            "Hulk"
+    ];
 
-            superHeroes[0] = "Daredevil" 
-            superHeroes[3] = "Ms Marvel" 
-            superHeroes[ superHeroes.length - 1] = "Scarlet Witch"
+    superHeroes[0] = "Daredevil"l;
+    superHeroes[3] = "Ms Marvel"; 
+    superHeroes[ superHeroes.length - 1] = "Scarlet Witch";
                   
                     </code></pre>
 
@@ -216,22 +227,21 @@
             <section class="detail-slide">
                 <div class="sub-title">Properties and methods</div>
                 <pre><code class="hljs">
-      
-                var superHeroes = [
-                        "Batman",
-                        "Superman",
-                        "Spiderman"
-                ];
-    
-                superHeroes.length; // 3
+var superHeroes = [
+        "Batman",
+        "Superman",
+        "Spiderman"
+];
 
-                superHeroes.pop(); // Removes last element of array
-                superHeroes.push(); // Adds element to end of array
+superHeroes.length; // 3
 
-                superHeroes.shift(); // Removes first element of array
-                superHeroes.unshift("Wonder Woman"); // Add element to start of array
+superHeroes.pop(); // Removes last element of array
+superHeroes.push(); // Adds element to end of array
 
-                superHeroes.indexOf("Superman") // Gets position of "Superman": 1
+superHeroes.shift(); // Removes first element of array
+superHeroes.unshift("Wonder Woman"); // Add element to start
+
+superHeroes.indexOf("Superman") // Gets position of "Superman": 1
                       
                         </code></pre>
 
@@ -240,21 +250,20 @@
             <section class="detail-slide">
                 <div class="sub-title">Looping through an array Elements</div>
                 <pre><code class="hljs">
-      
-                var superHeroes = [
-                        "Batman",
-                        "Superman",
-                        "Spiderman",
-                        "Wonder woman",
-                        "Black Widow",
-                        "Hulk"
-                ];
-    
-                superHeroes[0];
-                superHeroes[1];
-                superHeroes[2];
+    var superHeroes = [
+            "Batman",
+            "Superman",
+            "Spiderman",
+            "Wonder woman",
+            "Black Widow",
+            "Hulk"
+    ];
 
-                // doing the same thing over and over. Candidate for a loop
+    superHeroes[0];
+    superHeroes[1];
+    superHeroes[2];
+
+    // doing the same thing over and over. Candidate for a loop
                       
                         </code></pre>
 
@@ -264,39 +273,37 @@
             <section class="detail-slide">
                 <div class="sub-title">Looping through an array Elements</div>
                 <pre><code class="hljs">
-      
-                var superHeroes = [
-                        "Batman",
-                        "Superman",
-                        "Spiderman",
-                        "Wonder woman",
-                        "Black Widow",
-                        "Hulk"
-                ];
-    
-                for(var i = 0; i &#62;= 6; i++) {
-                    console.log(superHeroes[i]);
-                }
+    var superHeroes = [
+            "Batman",
+            "Superman",
+            "Spiderman",
+            "Wonder woman",
+            "Black Widow",
+            "Hulk"
+    ];
+
+    for(var i = 0; i &#62;= 6; i++) {
+        console.log(superHeroes[i]);
+    }
                         </code></pre>
 
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Even better way</div>
-                <pre><code class="hljs">
-          
-                    var superHeroes = [
-                            "Batman",
-                            "Superman",
-                            "Spiderman",
-                            "Wonder woman",
-                            "Black Widow",
-                            "Hulk"
-                    ];
-        
-                    for(var i = 0; i &#62;= superHeroes.length; i++) {
-                        console.log(superHeroes[i]);
-                    }
+                <pre><code class="hljs"> 
+    var superHeroes = [
+            "Batman",
+            "Superman",
+            "Spiderman",
+            "Wonder woman",
+            "Black Widow",
+            "Hulk"
+    ];
+
+    for(var i = 0; i &#62;= superHeroes.length; i++) {
+        console.log(superHeroes[i]);
+    }
                             </code></pre>
 
             </section>
@@ -304,20 +311,19 @@
             <section class="detail-slide">
                 <div class="sub-title">The way i use most often</div>
                 <pre><code class="hljs">
-              
-                        var superHeroes = [
-                                "Batman",
-                                "Superman",
-                                "Spiderman",
-                                "Wonder woman",
-                                "Black Widow",
-                                "Hulk"
-                        ];
-            
-                        superHeroes.forEach(function(hero)
-                        {
-                            console.log(hero)
-                        });
+    var superHeroes = [
+            "Batman",
+            "Superman",
+            "Spiderman",
+            "Wonder woman",
+            "Black Widow",
+            "Hulk"
+    ];
+
+    superHeroes.forEach(function(hero)
+    {
+        console.log(hero)
+    });
                                 </code></pre>
 
             </section>
@@ -360,25 +366,24 @@
             <section class="detail-slide">
                 <div class="sub-title">Creating objects</div>
                 <pre><code class="hljs">
+    var emptyObject = {};
 
-                    var emptyObject = {};
-
-                    var movie = {
-                        name: "Jurrasic Park",
-                        director: "Stephen Spielberg",
-                        duration: 127
-                    }
-                  
-                    var bookSeries = {
-                        name: "song of ice and fire",
-                        author: "Geroge R. R. Martin",
-                        books : [
-                            "A game of thrones",
-                            "A clash of kings",
-                            "A Feast for crows",
-                            "A Dance with dragons"
-                        ]
-                    };
+    var movie = {
+        name: "Jurrasic Park",
+        director: "Stephen Spielberg",
+        duration: 127
+    }
+    
+    var bookSeries = {
+        name: "song of ice and fire",
+        author: "Geroge R. R. Martin",
+        books : [
+            "A game of thrones",
+            "A clash of kings",
+            "A Feast for crows",
+            "A Dance with dragons"
+        ]
+    };
                  
                     </code></pre>
 
@@ -387,16 +392,15 @@
             <section class="detail-slide">
                 <div class="sub-title">Accessing Values</div>
                 <pre><code class="hljs">
+    var movie = {
+        name: "Jurrasic Park",
+        director: "Stephen Spielberg",
+        duration: 127
+    }
     
-                        var movie = {
-                            name: "Jurrasic Park",
-                            director: "Stephen Spielberg",
-                            duration: 127
-                        }
-                      
-                        var movieName = movie.name;
-                        var movieDirector = movie.director;
-                        var movieDuration = movie.duration;
+    var movieName = movie.name;
+    var movieDirector = movie.director;
+    var movieDuration = movie.duration;
                      
                         </code></pre>
 
@@ -405,15 +409,14 @@
             <section class="detail-slide">
                 <div class="sub-title">Changing Values</div>
                 <pre><code class="hljs">
-        
-                var movie = {
-                    name: "Jurrasic Park",
-                    director: "Stephen Spielberg",
-                    duration: 127
-                }
-                
-                movie.name = "Lost World";
-                movie.duration = 129;
+    var movie = {
+        name: "Jurrasic Park",
+        director: "Stephen Spielberg",
+        duration: 127
+    }
+    
+    movie.name = "Lost World";
+    movie.duration = 129;
                 
                 </code></pre>
 
@@ -421,16 +424,15 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Adding new Values</div>
-                <pre><code class="hljs">
-            
-                var movie = {
-                    name: "Jurrasic Park",
-                    director: "Stephen Spielberg",
-                    duration: 127
-                }
-                
-                movie.writer = "Michael Crichton";
-                movie.sequal = "The Lost World"
+                <pre><code class="hljs">    
+    var movie = {
+        name: "Jurrasic Park",
+        director: "Stephen Spielberg",
+        duration: 127
+    }
+    
+    movie.writer = "Michael Crichton";
+    movie.sequal = "The Lost World"
                 
                 </code></pre>
 
@@ -438,20 +440,16 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Nested Objects</div>
-                <pre><code class="hljs">
-            
-                var movie = {,
-                    name: "Jurrasic Park",
-                    director: "Stephen Spielberg"
-                    duration: 127,
-                    imdbInfo: {
-                        rating: 6.5,
-                        link: "http://www.imdb.com/title/tt0119567/";
-                    }
-                }
-                
-                movie.imdbRating = 6.5;
-                movie.imdbLink = "http://www.imdb.com/title/tt0119567/";
+                <pre><code class="hljs">    
+    var movie = {,
+        name: "Jurrasic Park",
+        director: "Stephen Spielberg"
+        duration: 127,
+        imdbInfo: {
+            rating: 6.5,
+            link: "http://www.imdb.com/title/tt0119567/";
+        }
+    }
                 
                 </code></pre>
 
@@ -488,12 +486,10 @@
 
 
             <section class="detail-slide">
-                <div class="sub-title">Next Class</div>
-                <h4>Lab lesson</h4>
+                <div class="sub-title">Next Class: jquery</div>
                 <ul class="list">
-                    <li>Arrays</li>
-                    <li>Loops</li>
-                    <li>Put our new javascript knowledge to good use!</li>
+                    <li>Differentiate between jQuery and JavaScript</li>
+                    <li>jQuery Syntax</li>
                 </ul>
             </section>
 
