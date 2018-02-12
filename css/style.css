@@ -116,8 +116,15 @@ section.topic > h1 {
    color: #fff;
    font-family: 'Lato';
    text-transform: uppercase;
-   padding: 150px 0;
+   padding-top: 150px;
 }
+
+section.topic > h2 {
+    color: #fff;
+    font-family: 'Lato';
+    text-transform: uppercase;
+    font-size: 0.75em;
+ }
 
 /* EXERCISE */
 section.detail-slide .exercise {
