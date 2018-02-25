@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g transform="matrix(1.99149,0,0,1.99149,151.965,158.192)">
+        <g transform="matrix(0.0208333,0,0,0.0207923,0,0)">
+            <path d="M-8,2712C-8,1210 1210,-8 2712,-8C4215,-8 5432,1210 5432,2712C5432,4215 4215,5432 2712,5432C1210,5432 -8,4215 -8,2712" style="fill:rgb(146,239,224);"/>
+        </g>
+        <rect x="0" y="0" width="246.667" height="250.506" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="0" y="0" width="246.667" height="250.506"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(0.333333,0,0,0.332677,23.8766,66.3891)">
+                <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">C</text>
+                <text x="40.009px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">L</text>
+                <text x="72px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">I</text>
+                <text x="87.991px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">E</text>
+                <text x="122.991px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">N</text>
+                <text x="163px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">T</text>
+            </g>
+            <g transform="matrix(0.0208333,0,0,0.0207923,0,0)">
+                <path d="M6392,2712C6392,1210 7610,-8 9112,-8C10615,-8 11832,1210 11832,2712C11832,4215 10615,5432 9112,5432C7610,5432 6392,4215 6392,2712" style="fill:rgb(255,216,0);"/>
+            </g>
+            <g transform="matrix(0.333333,0,0,0.332677,153.627,66.3891)">
+                <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">S<tspan x="35px " y="0px ">E</tspan></text>
+                <text x="69.999px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">R</text>
+                <text x="108.033px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">V</text>
+                <text x="142.032px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">E</text>
+                <text x="177.032px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:54px;">R</text>
+            </g>
+            <g transform="matrix(0.0208333,0,0,0.0207923,0,0)">
+                <path d="M-8,9320C-8,7818 1210,6600 2712,6600C4215,6600 5432,7818 5432,9320C5432,10823 4215,12040 2712,12040C1210,12040 -8,10823 -8,9320" style="fill:rgb(255,176,195);"/>
+            </g>
+            <g transform="matrix(0.333333,0,0,0.332677,27.8766,200.451)">
+                <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">R</text>
+                <text x="26.006px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">E</text>
+                <text x="49.006px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">Q</text>
+                <text x="77px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">U</text>
+                <text x="104.006px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">E<tspan x="127.005px " y="0px ">S</tspan></text>
+                <text x="150.005px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">T</text>
+            </g>
+            <g transform="matrix(0.0208333,0,0,0.0207923,0,0)">
+                <path d="M6392,9320C6392,7818 7610,6600 9112,6600C10615,6600 11832,7818 11832,9320C11832,10823 10615,12040 9112,12040C7610,12040 6392,10823 6392,9320" style="fill:rgb(237,51,47);"/>
+            </g>
+            <g transform="matrix(0.333333,0,0,0.332677,156.958,199.866)">
+                <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">R</text>
+                <text x="26.006px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">E<tspan x="49.006px " y="0px ">S</tspan></text>
+                <text x="72.005px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">P</text>
+                <text x="96.005px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">O</text>
+                <text x="123.999px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">N</text>
+                <text x="151.005px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:36px;">S<tspan x="174.005px " y="0px ">E</tspan></text>
+            </g>
+        </g>
+    </g>
+</svg>
