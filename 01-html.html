@@ -10,13 +10,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -218,18 +218,66 @@
                 <img src="assets/class01/request-diagram04.svg" style="height:600px" />
             </section>
 
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>SO, WHATS WEB DEVELOPMENT?</h1>
+            </section>
+
             <section class="detail-slide">
-                <div class="sub-title">HTML CAKE</div>
+                <div class="sub-title">
+                    What's Web Development?
+                </div>
+                <div class="content">
+                    <ul class="list" style="padding-top:10%">
+                        <li>
+                            The creation and management of both websites and web-based applications
+                        </li>
+                        <li>
+                            Made up of the Front End and Back End
+                        </li>
+                        <li>
+                            Mainly involves editing text files and making sure they are in the right places
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>web production workflow</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">
+                    web production workflow
+                </div>
+                <img class="img-std" src="assets/class01/web-workflow.svg" />
+                <ul class="list" style="font-size: 0.75em">
+                    <li>
+                        Take the design and turn it into code and assets.
+                    </li>
+                    <li>
+                        Uses HTML/CSS to create the structure for a page and add styles.
+                    </li>
+                    <li>
+                        Add interactions with Javascript.
+                    </li>
+                    <li>
+                        Other responsibilities: accessibility, performance, cross-browser, offline first and cross-device functionality.
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">HTML - Structure</div>
                 <img src="assets/class01/cake/HTML-cake.png" />
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">HTML CAKE</div>
+                <div class="sub-title">CSS - Style</div>
                 <img src="assets/class01/cake/CSS-cake.png" />
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">HTML CAKE</div>
+                <div class="sub-title">JS - Interaction</div>
                 <img src="assets/class01/cake/js-cake.png" />
             </section>
 

@@ -122,7 +122,9 @@
                 <img src="assets/class01/dom-example.png" />
             </section>
 
-
+            <section class="topic" data-background-color="#FF8017">
+                <h1>ACTIVITY: GA Press release - Drawing the DOM Tree</h1>
+            </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Review Questions</div>
@@ -193,7 +195,7 @@
             </section>
 
             <section class="topic" data-background-color="#FF8017">
-                <h1>ACTIVITY: GA Press release image</h1>
+                <h1>Code along: GA Press release image</h1>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -206,7 +208,7 @@
             </section>
 
             <section class="topic" data-background-color="#FF8017">
-                <h1>ACTIVITY: GA Press release link</h1>
+                <h1>Code along: GA Press release link</h1>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -264,17 +266,59 @@
             <section class="detail-slide">
                 <div class="sub-title">Calculating Specificity</div>
                 <p class="normal">3 factors are used to calculate specificity</p>
-                <ol class="list">
-                    <li>id</li>
-                    <li>class</li>
-                    <li>element</li>
-                </ol>
+                <ul class="list">
+                    <li>id - worth the most points</li>
+                    <li>class - Middle of the pack</li>
+                    <li>element - worth the least points</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Specificity Example</div>
-                <img src="assets/class02/css-specificity.png">
+    <pre><code>
+    /* 
+    # of Ids - 0
+    # of Classes - 1
+    # of Elements - 1 
+    Specificity = 0 - 1 - 1
+    */
+    a.navigation { font-size: 40px; }
+    </code></pre>
+
+    <pre><code>
+    /* 
+    # of Ids - 0
+    # of Classes - 2
+    # of Elements - 1 
+    Specificity = 0 - 2 - 1
+    */
+    a.navigation.side-nav { font-size: 40px; }
+    </code></pre>
             </section>
+
+            <section class="detail-slide">
+                    <div class="sub-title">Specificity Example Cont.</div>
+    <pre><code>
+    /* 
+    # of Ids - 1
+    # of Classes - 1
+    # of Elements - 1 
+    Specificity = 1 - 1 - 1
+    */
+    a.nav#home { font-size: 40px; }
+    </code></pre>
+
+    <pre><code>
+    /* 
+    # of Ids - 0
+    # of Classes - 12
+    # of Elements - 1 
+    Specificity = 0 - 12 - 1
+    */
+    a.nav.nav.nav.nav.nav.nav.nav.nav.nav.nav.nav.nav  
+    { font-size: 40px; }
+    </code></pre>
+                </section>
 
             <section class="topic" data-background-color="#FF8017">
                 <h1>Code Along: CSS Specificity</h1>
@@ -283,7 +327,7 @@
     
 
             <section class="topic" data-background-color="#F33938">
-                <h1>lab time: <a href="https://flukeout.github.io/">CSS Diner</a></h1>
+                <h1>lab time: CSS Diner</h1>
             </section>
 
             <section class="topic" data-background-color="black">
@@ -299,6 +343,7 @@
                     <li>CSS Selectors</li>
                     <li>CSS inheritance</li>
                     <li>CSS Specificity</li>
+                    <li>Practiced selecting elements with CSS</li>
                 </ul>
             </section>
 
@@ -329,18 +374,10 @@
                 </ul>
             </section>
 
-            <section class="detail-slide">
-                <div class="sub-title">Next Class</div>
-                <h4>CSS Box model</h4>
-                <ul class="list">
-                    <li>Review week 1</li>
-                    <li>Talk a bit more about final project</li>
-                    <li>Introduction to the Box model</li>
-                    <li>More CSS Selectors</li>
-                    <li>Talk about normalize.css and reset.css</li>
-                </ul>
+            <section class="topic" data-background-color="black">
+                <h1>Feedback time</h1>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdezTCAXACtDPqcKOoPhihoPPL4fHE7RVnX1xSiNoPaeQwuOQ/viewform">Google form</a>
             </section>
-
         </div>
     </div>
 
