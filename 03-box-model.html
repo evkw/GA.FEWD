@@ -47,17 +47,11 @@
                 <div class="sub-title">Class 3: CSS Box model</div>
                 
                 <ul class="list">
-                    <li>Assignments</li>
                     <li>How to start a project/website</li>
                     <li>Box Model</li>
                     <li>More CSS Selectors</li>
-                    <li>normalize.css - reset.css</li>
                     <li>Lab time: Relaxar landing page</li>
                 </ul>
-            </section>
-
-            <section class="topic" data-background-color="#1EC9C6">
-                <h1>Assignment topics</h1>
             </section>
 
             <section class="detail-slide">
@@ -98,12 +92,12 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Why bad file formats reduce our will to live</div>
+                <div class="sub-title">Indenting matters!</div>
                 <img src="assets/class03/poor-file-format.png">
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Why bad file formats reduce our will to live</div>
+                <div class="sub-title">Can save you hours!!</div>
                 <img src="assets/class03/good-file-format.png">
             </section>
 
@@ -132,9 +126,7 @@
                     <br> padding-left +
                     <br> padding-right +
                     <br> border-left +
-                    <br> border-right +
-                    <br> margin-left +
-                    <br> margin-right =
+                    <br> border-right =
                     <br>
                     <strong>TOTAL WIDTH</strong>
                 </p>
@@ -144,6 +136,18 @@
             <section class="topic" data-background-color="#FF8017">
                 <h1>Code Along: Tags and Boxes</h1>
                 <h2>www.codepen.io/evkw - Tags and Boxes</h2>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Dont like maths?</div>
+                <p class="normal">Its easy to increase the padding or border and cause the page layout to go.. odd..</p>
+                <p class="normal">Changing the box-sizing css attribute will change the width/height to be the total visible area</p>
+        <pre><code>
+            *, *:before, *:after {
+                box-sizing: border-box;
+            }
+        </code></pre>
+                <p class="normal"><a href="https://css-tricks.com/box-sizing/">A great article about box-sizing</a></p>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -197,8 +201,9 @@
             <section class="detail-slide">
                 <div class="sub-title">Extra Resources</div>
                 <ul class="list">
-                    <li>https://www.w3schools.com/css/css_boxmodel.asp</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model</li>
+                    <li><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Shay Howe's example (ignore the first bit about display)</a></li>
+                    <li><a href="https://www.w3schools.com/css/css_boxmodel.asp">w3schools example</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Mozilla example</a></li>
                 </ul>
             </section>
             
@@ -216,7 +221,20 @@
 
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: false,
+    
+                transition: 'slide',
+                dependencies: [
+                    { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+                ]
+            });
+    
+        </script>
 </body>
 
 </html>
