@@ -13,6 +13,22 @@
     src: url('../assets/fonts/lato/Lato-BoldItalic.ttf');
 }
 
+.reveal section img {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+
+.reveal section img.img-std {
+    box-shadow: none;
+    border:none;
+}
+
+.reveal pre {
+    box-shadow: none !important;
+}
+
 .reveal pre code {
     max-height: 600px;
 }

@@ -3,13 +3,22 @@
 
 <head>
     <title>FEWD: Class 01</title>
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/white.css" id="theme">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="css/zenburn.css">
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/zenburn.css" />
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
+    <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -158,7 +167,7 @@
             </section>
 
             <section class="detail-slide">
-                <img style="height:700px" src="assets/gray.jpg" />
+                <img style="height:600px" src="assets/gray.jpg" />
             </section>
 
             <section class="detail-slide">
@@ -241,8 +250,8 @@
                     <li>Initially released in 1993</li>
                     <li>Currently version 5.1</li>
                     <li>Open source (No one owns it)</li>
+                    <li>Originally used for scientists to share documents</li>
                 </ul>
-
             </section>
 
             <section class="detail-slide">
@@ -513,7 +522,7 @@
             <section class="detail-slide">
                 <div class="sub-title">External CSS</div>
                 <ul class="list">
-                    <li>Seperates css from html</li>
+                    <li>Separates css from html</li>
                     <li>Can reuse css across multiple html files</li>
                     <li>Much easier to maintain</li>
                     <li>Greater text editor support</li>
@@ -530,7 +539,7 @@
             </section>
 
             <section class="topic" data-background-color="#F33938">
-                <h1>lab time</h1>
+                <h1>lab time - Cookie recipe</h1>
             </section>
 
             <section class="topic" data-background-color="black">
@@ -561,14 +570,13 @@
                 <h4>Class 2 of 20 - CSS Basics </h4>
                 <ul class="list">
                     <li>CSS Deep dive</li>
-                    <li>Start making your portfolio!</li>
                 </ul>
             </section>
         </div>
     </div>
 
-    <script src="js/head.min.js"></script>
-    <script src="js/reveal.js"></script>
+    <script src="node_modules/reveal.js/lib/js/head.min.js"></script>
+    <script src="node_modules/reveal.js/js/reveal.js"></script>
     <script>
         Reveal.initialize({
             controls: true,
