@@ -21,6 +21,10 @@
     box-shadow: none !important;
 }
 
+.reveal section img.fit-img{
+    height: 600px;
+}
+
 .reveal section img.img-std {
     box-shadow: none;
     border:none;

@@ -10,13 +10,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -38,7 +38,6 @@
                     <li>Apply and explain CSS “cascade” including: importance, specificity and inheritance</li>
                     <li>Describe the DOM and draw simple DOM tree</li>
                     <li>Predict image paths and apply relative paths to img and a tags</li>
-                    <li>Experiment with margin and border</li>
                 </ul>
             </section>
 
@@ -48,6 +47,7 @@
                     <li>Review HTML + CSS Syntax and the DOM</li>
                     <li>Explore the img element and image types</li>
                     <li>Explore the anchor tag</li>
+                    <li>Practice relative and absolute paths</li>
                     <li>Deep dive into CSS</li>
                     <li>Lab time</li>
                 </ul>
@@ -73,17 +73,34 @@
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">Wireframing Tools</div>
-                    <ul class="list">
-                        <li><a href="https://www.sketchapp.com/">Sketch</a></li>
-                        <li>Adobe Illustrator | <a href="https://www.adobe.com/au/products/indesign.html">InDesign</a> | <a href="https://www.adobe.com/au/products/photoshop.html">Photoshop</a> | <a href="https://www.adobe.com/au/products/xd.html">XD</a></li>
-                        <li><a href="http://affinity.serif.com/">Affinity Design</a></li>
-                        <li>Pen and paper</li>
-                    </ul>
-                </section>
+                <div class="sub-title">Wireframing Tools</div>
+                <ul class="list">
+                    <li>
+                        <a href="https://www.sketchapp.com/">Sketch</a>
+                    </li>
+                    <li>Adobe Illustrator |
+                        <a href="https://www.adobe.com/au/products/indesign.html">InDesign</a> |
+                        <a href="https://www.adobe.com/au/products/photoshop.html">Photoshop</a> |
+                        <a href="https://www.adobe.com/au/products/xd.html">XD</a>
+                    </li>
+                    <li>
+                        <a href="http://affinity.serif.com/">Affinity Design</a>
+                    </li>
+                    <li>Pen and paper</li>
+                </ul>
+            </section>
 
             <section class="topic" data-background-color="#1EC9C6">
                 <h1>Review HTML + CSS and the DOM</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Review Questions</div>
+                <ul class="list">
+                    <li class="fragment">Are HTML Tags upper or lower case?</li>
+                    <li class="fragment">Which element in the DOM is visible to users?</li>
+                    <li class="fragment">Which element do we use to link external CSS?</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
@@ -122,18 +139,96 @@
                 <img src="assets/class01/dom-example.png" />
             </section>
 
-            <section class="topic" data-background-color="#FF8017">
-                <h1>ACTIVITY: GA Press release - Drawing the DOM Tree</h1>
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Absolute and Relative Paths</h1>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Review Questions</div>
+                <div class="sub-title">Some Terminology</div>
                 <ul class="list">
-                    <li class="fragment">Are HTML Tags upper or lower case?</li>
-                    <li class="fragment">Which element in the DOM is visible to users?</li>
-                    <li class="fragment">Which element do we use to link external CSS?</li>
+                    <li>Root - The top level folder of the computer (usually c:/ for PC and Username for Macs)</li>
+                    <li>Project Root - The top level folder for a website / web application</li>
+                    <li>Subdirectories - All folders under the root directory</li>
                 </ul>
             </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Mac Root</div>
+                <img src="assets/class02/mac-root.jpg" class="fit-img" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">PC Root</div>
+                <img src="assets/class02/pc-root.jpg" class="fit-img" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">VS Code view of a project</div>
+                <img src="assets/class02/VSCode-view.png" class="fit-img" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Windows explorer view of a project</div>
+                <img src="assets/class02/PC-explorer-view.png" class="fit-img" />
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Absolute path</div>
+                <ul class="list" style="font-size: 0.8em;">
+                    <li>Similar to a full Physical Address e.g 1 Market Street, Sydney, NSW 2000, Australia</li>
+                    <li>Can find a file from any starting location</li>
+                    <li>Useful if storing assets outside of the project</li>
+                    <li>I've had issues deleting files without realising projects were using them</li>
+                    <li>Used when linking to other websites</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Absolute path Examples</div>
+                <pre>
+                    <code class="hljs">
+    <!--Absolute path to the Sydney Wikipedia Article -->
+    <a href="https://en.wikipedia.org/wiki/Sydney" /></a>
+    
+    <!-- Absolute path to an image on the computer -->
+    <img src="c:\development\assets\images\logo.png"/>          
+                    </code>
+                </pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Relative Path</div>
+                <ul class="list" style="font-size: 0.8em;">
+                    <li>Uses directions from your current location to the target</li>
+                    <li>e.g Starting from Town Hall station, Walk down George St, Turn left of Market and enter the 5th building</li>
+                    <li>Useful when bundling images and assets within the project</li>
+                    <li>The syntax is a little harder to use</li>
+                    <li>Should try to use this method as often as possible</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                    <div class="sub-title">Relative Path Syntax</div>
+                    <pre>
+                        <code>
+    <!-- Looks for logo.jpg in the same directory 
+        this element was declared -->
+    <img src="logo.jpg"/>
+    <img src="./logo.jpg"/>
+
+    <!-- Look in the directory above where 
+        the element was declared -->
+    <img src="../logo.jpg"/>
+
+    <!-- Look in the directory 3 levels up from where 
+        the element was declared -->
+    <img src="../../../logo.jpg"/>
+
+    <!-- Move up one directory then look in sub-directory -->
+    <img src="../assets/image/logo.jpg" />
+                        </code>
+                    </pre>
+                </section>
 
             <section class="topic" data-background-color="#1EC9C6">
                 <h1>img element</h1>
@@ -194,10 +289,6 @@
                 </ul>
             </section>
 
-            <section class="topic" data-background-color="#FF8017">
-                <h1>Code along: GA Press release image</h1>
-            </section>
-
             <section class="topic" data-background-color="#1EC9C6">
                 <h1>anchor elements</h1>
             </section>
@@ -208,7 +299,8 @@
             </section>
 
             <section class="topic" data-background-color="#FF8017">
-                <h1>Code along: GA Press release link</h1>
+                <h1>Code along: Paths, Anchors and Images</h1>
+                <h2>Schoology - labs</h2>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -275,7 +367,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Specificity Example</div>
-    <pre><code>
+                <pre><code>
     /* 
     # of Ids - 0
     # of Classes - 1
@@ -285,7 +377,7 @@
     a.navigation { font-size: 40px; }
     </code></pre>
 
-    <pre><code>
+                <pre><code>
     /* 
     # of Ids - 0
     # of Classes - 2
@@ -297,8 +389,8 @@
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">Specificity Example Cont.</div>
-    <pre><code>
+                <div class="sub-title">Specificity Example Cont.</div>
+                <pre><code>
     /* 
     # of Ids - 1
     # of Classes - 1
@@ -308,7 +400,7 @@
     a.nav#home { font-size: 40px; }
     </code></pre>
 
-    <pre><code>
+                <pre><code>
     /* 
     # of Ids - 0
     # of Classes - 12
@@ -318,13 +410,13 @@
     a.nav.nav.nav.nav.nav.nav.nav.nav.nav.nav.nav.nav  
     { font-size: 40px; }
     </code></pre>
-                </section>
+            </section>
 
             <section class="topic" data-background-color="#FF8017">
                 <h1>Code Along: CSS Specificity</h1>
                 <h2>www.codepen.io/evkw - CSS Specificity</h2>
             </section>
-    
+
 
             <section class="topic" data-background-color="#F33938">
                 <h1>lab time: CSS Diner</h1>
@@ -337,6 +429,7 @@
             <section class="detail-slide">
                 <div class="sub-title">What we covered today</div>
                 <ul class="list">
+                    <li>Different types of pathing</li>
                     <li>Image elements and image types</li>
                     <li>Anchor elements</li>
                     <li>CSS Colours</li>
@@ -354,9 +447,12 @@
             <section class="detail-slide">
                 <div class="sub-title">Extra Resources</div>
                 <ul class="list">
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Mozilla - CSS Colours</a></li>
                     <li>
-                        <a href="https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/">Useful article about CSS specificity</a></li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value">Mozilla - CSS Colours</a>
+                    </li>
+                    <li>
+                        <a href="https://www.smashingmagazine.com/2007/07/css-specificity-things-you-should-know/">Useful article about CSS specificity</a>
+                    </li>
                     </li>
                     <li>
                         <a href="https://www.w3schools.com/css/default.asp">w3schools - CSS</a>
@@ -365,12 +461,14 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Homework</div>
-                <ul>
+                <div class="sub-title">Outside of class</div>
+                <ul class="list">
                     <li>Finish off CSS Diner</li>
                     <li>Start working on your project</li>
-                    <li>Have a look through <a href="http://learnlayout.com/">learn layout</a> - We will go through all this material in the coming weeks</li>
-                    <li>Optional - Try to go through this<a href="http://discover-devtools.codeschool.com/">Chrome dev tools tutorial</a> it is an invaluable resource!</li>
+                    <li>Have a look through
+                        <a href="http://learnlayout.com/">learn layout</a> - We will go through all this material in the coming weeks</li>
+                    <li>Optional - Try to go through this
+                        <a href="http://discover-devtools.codeschool.com/">Chrome dev tools tutorial</a> it is an invaluable resource!</li>
                 </ul>
             </section>
 
@@ -384,19 +482,19 @@
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script>
-            Reveal.initialize({
-                controls: true,
-                progress: true,
-                history: true,
-                center: false,
-    
-                transition: 'slide',
-                dependencies: [
-                    { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-                ]
-            });
-    
-        </script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+
+    </script>
 </body>
 
 </html>
