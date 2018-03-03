@@ -10,13 +10,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -45,7 +45,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Class 3: CSS Box model</div>
-                
+
                 <ul class="list">
                     <li>How to start a project/website</li>
                     <li>Box Model</li>
@@ -57,9 +57,30 @@
             <section class="detail-slide">
                 <div class="sub-title">Review Questions</div>
                 <ul class="list">
-                    <li class="fragment">What HTML elements can you remember?</li>
-                    <li class="fragment">What is a selector?</li>
-                    <li class="fragment">What file types make up a website?</li>
+                    <li class="fragment">Roughly, how does the web work?</li>
+                    <li class="fragment">What does HTML do?</li>
+                    <li class="fragment">What does CSS do?</li>
+                    <li class="fragment">What does JS do?</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">HTML Review Questions</div>
+                <ul class="list">
+                    <li class="fragment">What are elements?</li>
+                    <li class="fragment">What makes up an element?</li>
+                    <li class="fragment">What are some common HTML tags?</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">CSS Review Questions</div>
+                <ul class="list">
+                    <li class="fragment">Where do we include the CSS?</li>
+                    <li class="fragment">What is a CSS rule?</li>
+                    <li class="fragment">What HTML attribute would .title target?</li>
+                    <li class="fragment">What HTML attribute would #title target?</li>
+                    <li class="fragment">What is specificity?</li>
                 </ul>
             </section>
 
@@ -99,6 +120,26 @@
             <section class="detail-slide">
                 <div class="sub-title">Can save you hours!!</div>
                 <img src="assets/class03/good-file-format.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">HTML Syntax Guidelines</div>
+                <ul class="list">
+                    <li>One element per line</li>
+                    <li>Any elements inside another element should be indented</li>
+                    <li>VSCode hot key  Alt + Shift + F will automatically indent highlighed code</li>
+                    <li>Shift + Option + F on a mac</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">CSS Syntax Guidelines</div>
+                <ul class="list">
+                    <li>Try to group CSS rules by page / location on the page under a comment header</li>
+                    <li>Seperate each CSS rule with a new line</li>
+                    <li>New line for each rule</li>
+                    <li><a href="https://cssguidelin.es/">CSS Guidlines</a> is a community driven best practices. Worth a read </li>
+                </ul>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -142,12 +183,14 @@
                 <div class="sub-title">Dont like maths?</div>
                 <p class="normal">Its easy to increase the padding or border and cause the page layout to go.. odd..</p>
                 <p class="normal">Changing the box-sizing css attribute will change the width/height to be the total visible area</p>
-        <pre><code>
+                <pre><code>
             *, *:before, *:after {
                 box-sizing: border-box;
             }
         </code></pre>
-                <p class="normal"><a href="https://css-tricks.com/box-sizing/">A great article about box-sizing</a></p>
+                <p class="normal">
+                    <a href="https://css-tricks.com/box-sizing/">A great article about box-sizing</a>
+                </p>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -195,18 +238,24 @@
             </section>
 
             <section class="topic" data-background-color="#FFD800">
-                    <h1>Q & A</h1>
-                </section>
+                <h1>Q & A</h1>
+            </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Extra Resources</div>
                 <ul class="list">
-                    <li><a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Shay Howe's example (ignore the first bit about display)</a></li>
-                    <li><a href="https://www.w3schools.com/css/css_boxmodel.asp">w3schools example</a></li>
-                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Mozilla example</a></li>
+                    <li>
+                        <a href="https://learn.shayhowe.com/html-css/opening-the-box-model/">Shay Howe's example (ignore the first bit about display)</a>
+                    </li>
+                    <li>
+                        <a href="https://www.w3schools.com/css/css_boxmodel.asp">w3schools example</a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Mozilla example</a>
+                    </li>
                 </ul>
             </section>
-            
+
             <section class="detail-slide">
                 <div class="sub-title">Next Class</div>
                 <h4>Layouts</h4>
@@ -222,19 +271,19 @@
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
     <script>
-            Reveal.initialize({
-                controls: true,
-                progress: true,
-                history: true,
-                center: false,
-    
-                transition: 'slide',
-                dependencies: [
-                    { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
-                ]
-            });
-    
-        </script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+
+    </script>
 </body>
 
 </html>
