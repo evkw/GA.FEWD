@@ -42,6 +42,109 @@
                 </ul>
             </section>
 
+            <section class="detail-slide">
+                <div class="sub-title">Agenda</div>
+                <ul class="list">
+                    <li>Review Flexbox</li>
+                    <li>The position CSS property</li>
+                    <li>Lots of lab time!</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Position</div>
+                <p class="normal">Position determines how an element is positioned in the document flow</p>
+                <ul class="list">
+                    <li>Does the element stay still when you scroll the page?</li>
+                    <li>Can elements overlap?</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Position: Static</div>
+                <pre class="hljs"><code>
+                    p { position: static; }
+                </code></pre>
+                <ul class="list">
+                    <li>Default value</li>
+                    <li>Elements render in order</li>
+                    <li>Elements render as they appear in document flow</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Position: Absolute</div>
+                <pre class="hljs"><code>
+                    p { position: absolute; }
+                    </code></pre>
+                <ul class="list">
+                    <li>Elements position relative to its closest non-static ancestor element</li>
+                    <li>Positions based on entire document if all elements above are static</li>
+                    <li>Removes element from document flow</li>
+                    <li>Useful for</li>
+                    <ul class="list">
+                        <li>Precise Positioning</li>
+                        <li>Difficult alignment</li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Position: Fixed</div>
+                <pre class="hljs"><code>
+                    p { position: fixed; }
+                    </code></pre>
+                <ul class="list">
+                    <li>Elements position based on the browser window (viewport)</li>
+                    <li>Wont move when scrolling</li>
+                    <li>Removes element from document flow</li>
+                    <li>Useful for</li>
+                    <ul class="list">
+                        <li>Creating headers, side-nav, back to top buttons</li>
+                        <li>Precise Positioning</li>
+                        <li>Difficult alignment</li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Position: Relative</div>
+                <pre class="hljs"><code>
+            p { position: relative; }
+            </code></pre>
+                <ul class="list">
+                    <li>Element position based on its normal position in document flow</li>
+                    <li>Adding left: 20px; will push element 20px left of its normal position in the document flow</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Position: Sticky</div>
+                <pre class="hljs"><code>
+                p { position: sticky; }
+                </code></pre>
+                <ul class="list">
+                    <li>Element position based on user's scroll position</li>
+                    <li>Combination of relative and fixed positions</li>
+                    <li>Relative until a scroll offset is reached, then it "sticks" in place using fixed positioning</li>
+                    <li>Not supported in IE/Edge 15</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Position: Inherit</div>
+                <pre class="hljs"><code>
+                p { position: inherit; }
+                </code></pre>
+                <ul class="list">
+                    <li>Inherits the position property from parent element</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Positions</h1>
+            </section>
+
             <section class="topic" data-background-color="#F33938">
                 <h1>lab time: startup matchmaker</h1>
             </section>
