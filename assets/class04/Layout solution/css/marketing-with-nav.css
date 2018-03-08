@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+header, article, section, footer {
+    margin: 5px;
+    background-color: gray;
+}
+
+header {
+    height: 200px;
+}
+
+#logo {
+    float: left;
+    height: 150px;
+    width: 20%;
+    background-color: black;
+    margin: 20px;
+}
+
+header > nav {
+    height: 150px;
+    width: 60%;
+    background-color: black;
+    float: right;
+    margin: 20px;
+}
+
+a.link {
+    display: inline-block;
+    height: 80%;
+    width: 22%;
+    background-color: white;
+    margin: 15px;
+}
+
+article {
+    height: 500px;
+}
+
+section {
+    float: left;
+    width: 32.8%;
+    height: 150px;
+}
+
+footer {
+    clear: both;
+    height: 200px;
+}

@@ -1,0 +1,28 @@
+body {
+    margin: 0
+}
+
+header, footer, article, section {
+    background-color: gray;
+    margin: 5px;
+}
+
+header, footer {
+    height: 150px;
+}
+
+article {
+    float: left;
+    width: 49.39%;
+    height: 350px;
+}
+
+section {
+    float: left;
+    width: 32.8%;
+    height: 200px;
+}
+
+footer {
+    clear: both;
+}

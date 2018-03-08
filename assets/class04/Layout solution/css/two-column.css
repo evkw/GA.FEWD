@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+}
+
+header, article, aside, footer {
+    background-color: gray;
+}
+
+header {
+    height: 150px;
+    margin: 5px;
+}
+
+article {
+    float: left;
+    height: 500px;
+    width: 70%;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+aside {
+    float: right;
+    height: 500px;
+    width: 29%;
+    margin-right: 5px;
+}
+
+footer {
+    clear: both;
+    height: 150px;
+    margin: 5px;
+}
