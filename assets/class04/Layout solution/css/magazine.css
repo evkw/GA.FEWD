@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* HEADER SECTION */
+header, section, article, aside, footer, nav {
+    margin: 1px;
+}
+
+#page-header {
+    height: 150px;
+}
+
+#logo {
+    height: 90%;
+    width: 341px;
+    background-color: gray;
+    float: left;
+    margin: 2px;
+}
+
+#page-header > nav {
+    width: 79%;
+    height: 90%;
+    float: right;
+}
+
+a.link {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    float: left;
+    width: 19%;
+    height: 137px;
+    margin: 0 3px;
+    background-color: gray;
+}
+
+/* CONTENT */
+#content {
+    height: 915px;
+}
+
+#side-panel {
+    float: left;
+    height: 900px;
+    width: 20%;
+    background-color: gray;
+}
+
+#main-content {
+    float: right;
+    width: 1345px;
+    height: 900px;
+}
+
+#content-header {
+    height: 150px;
+    width: 1307px;
+    background-color: gray;
+}
+
+#main-content > article {
+    float: left;
+    background-color: gray;
+    height: 500px;
+    width: 893px;
+}
+
+#main-content > aside {
+    float: left;   
+    background-color: gray;
+    height: 500px;
+    width: 411px;
+}
+
+#main-content section {
+    float: left;
+    width: 24.2%;
+    height: 245px;
+    background-color: gray;
+}
+
+/* FOOTER */
+
+footer {
+    clear: both;
+    height: 150px;
+    background-color: gray;
+    width: 98%;
+}

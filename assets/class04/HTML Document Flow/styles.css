@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 900px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    color: white;
+    text-decoration: none;
+    width: 20%;
+    height: 20%;
+    background-color: rgb(87, 87, 175);
+    border-radius: 25px;
+    margin: 3%;
+}

@@ -10,13 +10,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -38,16 +38,16 @@
                 <div class="sub-title">Learning Objectives</div>
                 <ul class="list">
                     <li>Review floats & clears</li>
-                    <li>Practice CSS Layouts</li>
+                    <li>Use flexbox to create layouts</li>
+                    <li>Practice Layouts using CSS</li>
                 </ul>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Agenda</div>
                 <ul class="list">
-                    <li>Review Floats and Clearing</li>
-                    <li>Float and Collapsing Parent Issue</li>
-                    <li>Look at Display Inline and Block</li>
+                    <li>Quick review on clears and floats</li>
+                    <li>Talk about flexbox and practice using flexbox to create layouts</li>
                     <li>Code along Float and Display examples</li>
                     <li>Lab Time: Relaxr page 2 - 2 Column Layout</li>
                 </ul>
@@ -65,6 +65,112 @@
             <section class="topic" data-background-color="#1EC9C6">
                 <h1>Floats & Clears</h1>
             </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What are floats?</div>
+                <img src="assets/class04/floats.png" style="width:450px">
+                <div style="display: inline-block; width: 450px;">
+                    <p class="normal">Elements with the float property</p>
+                    <ul class="list">
+                        <li>Remain in the document flow</li>
+                        <li>Can be pushed left or right</li>
+                        <li>Allows other content to flow around them</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What can we do with floats?</div>
+                <img src="assets/class04/layout.png" style="width:450px">
+                <div style="display: inline-block; width: 450px;">
+                    <p class="normal">Beyond just wrapping text</p>
+                    <ul class="list">
+                        <li>Building full page layouts</li>
+                        <li>Build smaller sections of a page (nav, footer etc)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Problem with floats</div>
+                <p class="normal">Once you have ﬂoated something, everything after it in the document ﬂow will ﬂoat up and try and ﬁll whatever
+                    gap there is</p>
+                <img src="assets/class04/not-cleared.png" style="height:400px">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Problem with floats</div>
+                <p class="normal">Using the CSS clear property we are able to return to the normal document flow</p>
+                <img src="assets/class04/cleared.png" style="height:400px">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Clear values</div>
+                <p class="normal">Clearing is drawing a line and saying things can't ﬂoat past this point </p>
+                <img src="assets/class04/clear-values.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Collapsing Parent</div>
+                <p class="normal">If everything inside an element is ﬂoated, that element will have a height of zero</p>
+                <img src="assets/class04/no-height.png" style="height:250px">
+                <p class="normal">Unless you
+                    <a href="https://codepen.io/anon/pen/QMRjVG">clear it</a>
+                </p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Clearing Techniques</div>
+                <ul class="list">
+                    <li>The Empty Div Method </li>
+                    <li>The Overﬂow Method </li>
+                    <li>The Clearﬁx Method</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Flexbox</h1>
+            </section>
+
+            <section class="detil-slide">
+                <div class="sub-title">What is flexbox?</div>
+                <ul class="list">
+                    <li>New CSS3 way of creating layouts</li>
+                    <li>Avoids having to use clears/floats</li>
+                    <li>Two main concepts to learn</li>
+                    <ul class="list">
+                        <li>Flex container</li>
+                        <li>Flex item</li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Flexbox terminology</div>
+                <img src="assets/class05/flex-terminology.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Flexbox terminology</div>
+                <img src="assets/class05/Flex-Axis.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Flex Container</div>
+                <ul class="list">
+                    <li></li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Layouts with flexbox</h1>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Flexbox building blocks</h1>
+            </section>
+
+
 
             <section class="topic" data-background-color="#F33938">
                 <h1>lab time: Relaxr Part 2</h1>
