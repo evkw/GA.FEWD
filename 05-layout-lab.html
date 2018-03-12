@@ -132,7 +132,7 @@
                 <h1>Flexbox</h1>
             </section>
 
-            <section class="detil-slide">
+            <section class="detail-slide">
                 <div class="sub-title">What is flexbox?</div>
                 <ul class="list">
                     <li>New CSS3 way of creating layouts</li>
@@ -157,20 +157,113 @@
 
             <section class="detail-slide">
                 <div class="sub-title">Flex Container</div>
+                <pre><code>
+                    .container {
+                        display: flex;
+                    }
+                </code></pre>
+
+                <p class="normal">
+                    When you set the display of an element to 'flex' it becomes a flex container and all immediate children elements become flex
+                    items of that container.
+                </p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Flex direction</div>
+                <p class="normal">
+                    A way to change the direction of the main axis of the flex container -
+                    <a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_flex-direction&preval=row">Example</a>
+                </p>
+
                 <ul class="list">
-                    <li></li>
+                    <li>row (default)</li>
+                    <li>column</li>
+                    <li>row-reverse</li>
+                    <li>column-reverse</li>
                 </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Flex wrap</div>
+                <p class="normal">
+                    Tells flexbox what to do with elements if the element width has exceeded page width -
+                    <a href="https://css-tricks.com/almanac/properties/f/flex-wrap/">Example</a>
+                </p>
+
+                <ul class="list">
+                    <li>nowrap (reduce the width of elements to fit in the row)</li>
+                    <li>wrap (Elements will be pushed to a new row)</li>
+                    <li>wrap-reverse (Elements will be pushed to a new row opposite to the cross-axis)</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Justify Content</div>
+                <p class="normal">
+                    Tells flexbox how to align items on the main axis -
+                    <a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_justify-content&preval=flex-start">Example</a>
+                </p>
+
+                <ul class="list">
+                    <li>flex-start</li>
+                    <li>flex-end</li>
+                    <li>center</li>
+                    <li>space-between</li>
+                    <li>space-around</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Align Items</div>
+                <p class="normal">
+                    Tells flexbox how to align items on the cross axis -
+                    <a href="https://www.w3schools.com/cssref/playit.asp?filename=playcss_align-items&preval=baseline">Example</a>
+                </p>
+
+                <ul class="list">
+                    <li>flex-start</li>
+                    <li>flex-end</li>
+                    <li>center</li>
+                    <li>baseline</li>
+                    <li>stretch</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Flexbox Froggy</h1>
             </section>
 
             <section class="topic" data-background-color="#FF8017">
                 <h1>Code Along: Layouts with flexbox</h1>
             </section>
 
-            <section class="topic" data-background-color="#FF8017">
-                <h1>Code Along: Flexbox building blocks</h1>
+            <section class="detail-slide">
+                <div class="sub-title">Flexbox Resources</div>
+                <ul class="list">
+                    <li>
+                        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks</a>
+                    </li>
+                    <li>
+                        <a href="https://flexbox.io/">Flexbox.io</a>
+                    </li>
+                    <li>
+                        <a href="https://flexboxzombies.com/p/flexbox-zombies">Flexbox Zombies</a>
+                    </li>
+                    <li>
+                        <a href="https://medium.freecodecamp.org/an-animated-guide-to-flexbox-d280cf6afc35">An animated guide</a>
+                    </li>
+                    <li>
+                        <a href="https://medium.freecodecamp.org/understanding-flexbox-everything-you-need-to-know-b4013d4dc9af">Everything you need to know</a>
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">MDN</a>
+                    </li>
+                    <li>
+                        <a href="http://www.flexboxdefense.com/">Flexbox Defence</a>
+                    </li>
+                </ul>
             </section>
-
-
 
             <section class="topic" data-background-color="#F33938">
                 <h1>lab time: Relaxr Part 2</h1>
@@ -182,6 +275,14 @@
 
             <section class="topic" data-background-color="#FFD800">
                 <h1>Q & A</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Homework</div>
+                <ul class="list">
+                    <li>Finish off Relaxr pt 2 (due next Thursday)</li>
+                    <li>Keep playing around with flex froggy</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
