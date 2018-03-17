@@ -10,13 +10,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -55,96 +55,463 @@
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
+                <h1>Why Responsive?</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">First computers to use the net</div>
+                <img src="assets/class07/computer-1990.jpg">
+                <p class="normal">Pretty much all of these early monitors had a resolution of 800x600</p>
+                <p class="normal">So there was only one resolution to design for</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Monitors got thinner but fit more pixels</div>
+                <img src="assets/class07/2000s-monitor.webp" style="height: 300px">
+                <p class="normal">By 2002 1024 x 768 became the most common display and many websites were re-designed to take advantage of
+                    the new space</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">In 2007 iphone changed everything</div>
+                <img src="assets/class07/smart-vs-comp.png" style="height: 400px">
+                <ul class="list">
+                    <li>Had a resolution of 480 x 320</li>
+                    <li>Started the race for smart phones</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Smart phone resolutions are silly</div>
+                <img src="assets/class07/smart-phone-resolutions.jpg">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Even iphone changes almost every year</div>
+                <img src="assets/class07/iPhone_Screen_res.jpg">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Now add tablets in the mix</div>
+                <img src="assets/class07/tablet.jpg">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Its just crazy!!</div>
+                <img src="assets/class07/resolution-bonanza.png" style="height: 400px">
+                <p class="normal">All the while, computer monitors keep evolving and you could start browsing the net on your TV</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Became un-manageable</div>
+                <ul class="list">
+                    <li>Having to re-design a website for each resolution is not possible</li>
+                    <li>Whole design disciplines were created to figure the best layout for the best device</li>
+                    <li>CSS3 added tools in 2012 to help make life easier for everyone</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Responsive design</div>
+                <ul class="list">
+                    <li class="fragment">Responsive designs respond to their environment</li>
+                    <li class="fragment">Became a cost-effective alternative to mobile development</li>
+                    <li class="fragment">Future proofed your websites from resolution craziness</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
                 <h1>Layout types</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Fixed Layout</div>
+                <ul class="list">
+                    <li>You have already made sites with this layout type</li>
+                    <li>Has a wrapper element with a fixed width</li>
+                    <li>Components inside it either have % or a fixed width/height</li>
+                    <li>No matter what screen resolution, users experience the same width</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Fixed Layout</div>
+                <img src="assets/class07/fixed-layout.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Fixed Layout Pros/Cons</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Pro</td>
+                            <td>Con</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Easier to use and customize in terms of design</td>
+                            <td>May create excessive white space on larger resolutions</td>
+                        </tr>
+                        <tr>
+                            <td>Less hassle with images, forms, video and other content that are fixed-width</td>
+                            <td>Smaller screen resolutions may require a horizontal scroll bar</td>
+                        </tr>
+                        <tr>
+                            <td>No need for min-width or max-width</td>
+                            <td>Seamless textures, patterns and image continuation are needed to accommodate those with larger
+                                resolutions
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Fluid layout</div>
                 <ul class="list">
                     <li>Also known as liquid layout</li>
-                    <li>Uses percentages to adjust to changes in screen</li>
-                    <li>Components inside have percentage widths</li>
+                    <li>Majority of components use % widths to adjust to changes in screen</li>
                     <li>Width change with browser window size</li>
                     <li>Box-sizing: border-box helps a lot</li>
                     <li>Liquid fills the parent container width</li>
                 </ul>
             </section>
 
-            <!-- image of fluid layout -->
-
             <section class="detail-slide">
-                <div class="sub-title">Elastic Layout</div>
-                <ul class="list">
-                    <li>All elements are sized using em or rem</li>
-                    <li>Makes everything proportional</li>
-                    <li>Usually takes a base font-size and scales everything relative to that size</li>
-                    <li>When text size is increased, layout increases</li>
-                </ul>
+                <div class="sub-title">Fluid Layout</div>
+                <img src="assets/class07/fluid-layout.png">
             </section>
 
-            <!-- image of elastic layout -->
-
-
+            <section class="detail-slide">
+                <div class="sub-title">Fluid Layout Pros/Cons</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Pro</td>
+                            <td>Con</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>More user-friendly, because it adjusts to the user’s set up</td>
+                            <td>Less control over what the user sees and may overlook problems</td>
+                        </tr>
+                        <tr>
+                            <td>Amount of extra white space is similar between all browsers and screen resolutions</td>
+                            <td>Content with set widths may be difficult to work with</td>
+                        </tr>
+                        <tr>
+                            <td>Can eliminate horizontal scroll bars in smaller screen resolutions</td>
+                            <td>On large resolutions, a lack of content may create excess white space</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
             <section class="topic" data-background-color="#1EC9C6">
                 <h1>Responsive Design</h1>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Name the screen types</div>
+                <div class="sub-title">Responsive layouts</div>
+                <img src="assets/class07/responsive-layouts.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Lets look at some examples</div>
                 <ul class="list">
-                    <li>Phone</li>
-                    <li>Laptop</li>
-                    <li>Desktop</li>
-                    <li>Tablet</li>
-                    <li>"Phablet"</li>
-                    <li>Game consoles</li>
-                    <li>TVs</li>
+                    <li>
+                        <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap</a>
+                    </li>
+                    <li>
+                        <a href="https://material.io/guidelines/#">Material Design</a>
+                    </li>
+                    <li>
+                        <a href="https://generalassemb.ly/">General Assembly</a>
+                    </li>
                 </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Approaches</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Desktop-down Design</div>
+                <img src="assets/class07/desktop-down.png">
+                <p class="normal">Websites that display large amounts of information, like business web-apps tend to use this approach</p>
+                <p class="normal">The lower the resolution, the more content you remove from the website</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Mobile-up Design</div>
+                <img src="assets/class07/mobile-up.png">
+                <p class="normal">Design your site to reach the largest audience possible</p>
+                <p class="normal">Tends to have less content</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">content-first design</div>
+                <ul class="list">
+                    <li>A newer UX concept</li>
+                    <li>requires more forward planning and testing before code begins</li>
+                    <ul class="list">
+                        <li>
+                            <a href="http://alistapart.com/blog/post/content-first-design">Some</a>
+                        </li>
+                        <li>
+                            <a href="http://www.uxbooth.com/articles/how-to-establish-a-content-first-design-process/">Articles</a>
+                        </li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Pillars of responsive design</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Pillars of responsive design</div>
+                <ul class="list">
+                    <li>Viewports</li>
+                    <li>Fluid sizing of elements</li>
+                    <li>Grids</li>
+                    <li>Units</li>
+                    <li>Media Queries</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Viewports</div>
+                <ul class="list">
+                    <li>User's visible area of a web page</li>
+                    <li>Varies with device</li>
+                    <li>Scales down a large desktop-first design to fit on a small mobile screen</li>
+                    <li>Was introduced as a quick fix to display on multiple device. By itself, its not perfect!</li>
+                </ul>
+
+                <p class="normal">
+                    <a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/imgs/no-vp-2x.png">No viewport set</a> vs
+
+                    <a href="https://developers.google.com/web/fundamentals/design-and-ux/responsive/imgs/vp-2x.png">Viewport set</a>
+                </p>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Set the viewport</div>
+                <pre class="hljs" style="width: 100%"><code>
+
+    <title>Reposnive Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS goes here -->
+
+                </code></pre>
+                <p class="normal">
+                    <b>width=device-width</b> - Use device width to determine how site will look</p>
+                <p class="normal">
+                    <b>initial-scale=1.0</b>- Dont zoom in by default</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">A couple of rules</div>
                 <ul class="list">
-                    <li>Visible area of a web page</li>
-                    <li>Smaller on a phone than a desktop</li>
-                    <li>width = device-width sets the width of the page to the screen-width of the device</li>
+                    <li>Dont use large fixed with elements. It will create a horizontal scroll bar</li>
+                    <li>Dont let content rely on a particular viewport width</li>
+                    <li>Use media queries to apply different styles for small and large screens</li>
                 </ul>
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">Media queries</div>
-                    <ul class="list">
-                        <li>Visible area of a web page</li>
-                        <li>Smaller on a phone than a desktop</li>
-                        <li>width = device-width sets the width of the page to the screen-width of the device</li>
-                    </ul>
-                </section>
-
-            <!-- Set view port image -->
-
-            <section class="detail-slide">
-                <div class="sub-title">ACTIVITY: Basic Media Queries</div>
-                <div class="exercise">
-                    <img src="assets/exercise.svg" />
-                    <div class="instructions">
-                        <ol>
-                            <!-- TODO -->
-                        </ol>
-                    </div>
-                </div>
+                <div class="sub-title">Fluid Sizing</div>
+                <ul class="list">
+                    <li>Sizing elements to adapt to the browser</li>
+                    <li>Dont hard code size values (we have done a lot of this in previous classes)</li>
+                    <li>Particularly important for images</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">ACTIVITY: Bootstrap Grid</div>
-                <div class="exercise">
-                    <img src="assets/exercise.svg" />
-                    <div class="instructions">
-                        <ol>
-                            <!-- TODO -->
-                        </ol>
-                    </div>
-                </div>
+                <div class="sub-title">Fluid Sizing - cont.</div>
+                <pre class="hljs">
+                        <code>
+    img {
+        width: 500px;
+        max-width: 100%;
+        height: auto;
+    }
+                        </code>
+                    </pre>
+                <p class="normal">You can make an image scale by using a combination of any
+                    <b>width</b>,
+                    <b>max-width</b> and
+                    <b>height: auto</b>
+                    -
+                    <a href="https://codepen.io/evkw/pen/OvRZjQ">Example</a>
+                </p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Grids</div>
+                <ul class="list">
+                    <li>Lots of websites are based on a grid-view</li>
+                    <li>Divides a page into columns (usually 12)</li>
+                    <li>Elements take up a set number of column widths</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Grids cont.</div>
+                <img src="assets/class07/grid.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Grids cont.</div>
+                <img src="assets/class07/grid-content.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Units</div>
+                <ul class="list">
+                    <li>em</li>
+                    <li>rem</li>
+                    <li>percentages</li>
+                    <li>vw</li>
+                    <li>vh</li>
+                    <li>vmin</li>
+                    <li>vmax</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">em</div>
+                <ul class="list">
+                    <li>Relative to the font-size of the element</li>
+                    <li>2em means 2x the current font size</li>
+                    <li>
+                        <a href="https://codepen.io/evkw/pen/yKaEgY">Play-around</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">rem</div>
+                <ul class="list">
+                    <li>Also font based</li>
+                    <li>Operates off the font-size of the root element (html)</li>
+                    <li>
+                        <a href="https://codepen.io/evkw/pen/aYmKyy">Play-around</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">rem</div>
+                <ul class="list">
+                    <li>Also font based</li>
+                    <li>Operates off the font-size of the root element (html)</li>
+                    <li>
+                        <a href="https://codepen.io/evkw/pen/aYmKyy">Play-around</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">vh/vw</div>
+                <ul class="list">
+                    <li>Based on the viewport</li>
+                    <li>1vh/vw = 1% of the view height/width</li>
+                    <li>
+                        <a href="https://codepen.io/evkw/pen/qoaKpx">Play-around</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">vmin/vmax</div>
+                <ul class="list">
+                    <li>Also based on the viewport</li>
+                    <li>1vmin = 1% of smallest value between height and width</li>
+                    <li>1vmax = 1% of largest value between height and width</li>
+                    <li>
+                        <a href="https://codepen.io/evkw/pen/qoaKpx">Play-around</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Media queries</div>
+                <ul class="list">
+                    <li>Filters that can be applied to CSS styles</li>
+                    <li>Uses conditions to determine whether the CSS is applied or not</li>
+                </ul>
+
+                <pre class="hljs">
+                    <code>
+    @media ( condition ) { ... }
+                    </code>
+                </pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Media queries cont.</div>
+                <pre class="hljs" style="width: 100%;font-size: 0.5em;">
+                    <code>
+    @media (min-width: 700px) { 
+        ... 
+    } 
+
+    @media (min-width: 700px) and (orientation: landscape) { 
+        ... 
+    } 
+
+    @media (min-width: 700px), handheld and (orientation: landscape) { 
+        ... 
+    }
+
+    @media only screen and (color) {
+        ... 
+    }
+
+    @media (not (tv)){ 
+        ... 
+    }    
+                    </code>
+                </pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Common queries</div>
+                <ul class="list" style="font-size: 0.75em">
+                    <li>min-width</li>
+                    <li>max-width</li>
+                    <li>min-height</li>
+                    <li>max-height</li>
+                    <li>orientation</li>
+                </ul>
+                
+                <pre class="hljs">
+                        <code>
+    @media (max-width: 480px) {} 
+    
+    @media (min-width: 769px) and (max-width: 1280px) {}
+                        </code>
+                    </pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Lets try and make this!</div>
+                <img src="assets/class07/responsive-layouts.png">
+                <a href="https://codepen.io/evkw/pen/XEjYvV">Codepen</a>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Some tools</div>
+                <ul class="list">
+                    <li><a href="http://screensiz.es/phone">Screensiz.es</a></li>
+                    <li><a href="http://mqtest.io/">mqtest.io</a></li>
+                    <li><a href="https://developers.google.com/web/tools/chrome-devtools/device-mode/?hl=en">Device mode</a></li>
+                </ul>
             </section>
 
             <section class="topic" data-background-color="#F33938">
@@ -162,8 +529,13 @@
             <section class="detail-slide">
                 <div class="sub-title">Extra Resources</div>
                 <ul class="list">
+                    <li>
+                        <a href="https://www.smashingmagazine.com/2009/06/fixed-vs-fluid-vs-elastic-layout-whats-the-right-one-for-you/">Smashing Magazine article</a>
+                    </li>
                     <li>https://www.w3schools.com/html/html_responsive.asp</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries</li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"></a>MDN article on media queries</a>
+                    </li>
                 </ul>
             </section>
 
@@ -180,7 +552,20 @@
 
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+
+    </script>
 </body>
 
 </html>
