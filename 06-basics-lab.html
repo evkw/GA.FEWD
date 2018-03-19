@@ -46,8 +46,49 @@
                 <div class="sub-title">Agenda</div>
                 <ul class="list">
                     <li>Review Flexbox</li>
+                    <li>Discuss CSS Position</li>
                     <li>Lots of lab time!</li>
                 </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Flexbox</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What is flexbox?</div>
+                <ul class="list">
+                    <li>New CSS3 way of creating layouts</li>
+                    <li>Avoids having to use clears/floats</li>
+                    <li>Two main concepts to learn</li>
+                    <ul class="list">
+                        <li>Flex container</li>
+                        <li>Flex item</li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Flexbox terminology</div>
+                <img src="assets/class05/flex-terminology.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Flexbox terminology</div>
+                <img src="assets/class05/Flex-Axis.png">
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Flexbox review</div>
+                <ul class="list">
+                    <li class="fragment">What css property controls the main axis?</li>
+                    <li class="fragment">What css property controls the cross axis?</li>
+                    <li class="fragment">When an element display is set to flex, what level of nested elements become flex items?</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Position</h1>
             </section>
 
             <section class="detail-slide">
@@ -56,6 +97,36 @@
                 <ul class="list">
                     <li>Does the element stay still when you scroll the page?</li>
                     <li>Can elements overlap?</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Position Values</div>
+                <pre class="hljs"><code>
+                    #container {
+                        top: 10px;
+                        left: 10px;
+                        right: 10px;
+                        bottom: 10px;
+                    }
+                </code></pre>
+                <ul class="list">
+                    <li>Does not apply to non-positioned elements</li>
+                    <li>Has <a href="https://www.w3schools.com/cssref/pr_pos_top.asp">slightly different properties</a> based on what the position type is</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">z-index: Controlling overlap</div>
+                <pre class="hljs"><code>
+                    #container {
+                        z-index: 10;
+                    }
+                </code></pre>
+                <ul class="list">
+                    <li>Used to determine the 'front' and 'back' of elements</li>
+                    <li>Acts very similar to layers in most photo editing software</li>
+                    <li>Higher numbers will display ontop of lower numbers</li>
                 </ul>
             </section>
 
@@ -76,7 +147,7 @@
                 <pre class="hljs"><code>
                     p { position: absolute; }
                     </code></pre>
-                <ul class="list">
+                <ul class="list" style="font-size: 0.75em" ;>
                     <li>Elements position relative to its closest non-static ancestor element</li>
                     <li>Positions based on entire document if all elements above are static</li>
                     <li>Removes element from document flow</li>
@@ -93,7 +164,7 @@
                 <pre class="hljs"><code>
                     p { position: fixed; }
                     </code></pre>
-                <ul class="list">
+                <ul class="list" style="font-size: 0.75em" ;>
                     <li>Elements position based on the browser window (viewport)</li>
                     <li>Wont move when scrolling</li>
                     <li>Removes element from document flow</li>
@@ -126,7 +197,7 @@
                     <li>Element position based on user's scroll position</li>
                     <li>Combination of relative and fixed positions</li>
                     <li>Relative until a scroll offset is reached, then it "sticks" in place using fixed positioning</li>
-                    <li>Not supported in IE/Edge 15</li>
+                    <li>Not supported in IE/Edge 10</li>
                 </ul>
             </section>
 
@@ -138,10 +209,6 @@
                 <ul class="list">
                     <li>Inherits the position property from parent element</li>
                 </ul>
-            </section>
-
-            <section class="topic" data-background-color="#FF8017">
-                <h1>Code Along: Positions</h1>
             </section>
 
             <section class="topic" data-background-color="#F33938">
