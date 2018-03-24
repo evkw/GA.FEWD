@@ -15,6 +15,10 @@
 
 /* Remove some of the revealjs defaults */
 
+.reveal blockquote {
+    box-shadow: none;
+}
+
 .reveal section img {
     background: none !important;
     border: none !important;

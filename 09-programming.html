@@ -10,13 +10,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -58,6 +58,12 @@
 
             <section class="detail-slide">
                 <div class="sub-title">What is programming?</div>
+                <blockquote>Writing human "readable" text that is transformed into a series of commands a computer can understand</blockquote>
+            </section>
+
+
+            <section class="detail-slide">
+                <div class="sub-title">What is programming?</div>
                 <p class="normal">What kind of tasks would make good a candidate for a program?</p>
                 <ul class="list">
                     <li class="fragment">Repeatable tasks</li>
@@ -96,7 +102,7 @@
 
             <section class="detail-slide">
                 <div class="sub-title">What is programming? (Updated)</div>
-                <p class="normal" style="padding-top:125px">"Humans and computers using their strengths together to accomplish tasks"</p>
+                <blockquote>"Humans and computers using their strengths together to accomplish tasks"</blockquote>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -124,6 +130,37 @@
                     <li>Add milk</li>
                     <li>Serve</li>
                 </ol>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Making decisions with pseudocode</div>
+                <p class="normal">Is a number even?</p>
+                <pre class="hljs"><code>
+        get number
+        if number is divisible by 2
+            return number is even
+        else
+            return number is odd
+                </code></pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Creating loops with pseudocode</div>
+                <p class="normal">Average marks of a class of 10</p>
+                <pre class="hljs"><code>
+            total = 0
+            grade_counter = 1
+
+            WHILE grade_counter <= 10
+                    INPUT grade
+                    total = total + grade
+                    grade_counter = grade_counter + 1
+
+            class_average = total / 10
+            PRINT class_average
+
+
+                    </code></pre>
             </section>
 
             <section class="detail-slide">
@@ -157,35 +194,208 @@
             <section class="detail-slide">
                 <div class="sub-title">What is javacript?</div>
                 <ul class="list">
+                    <li>Most popular programming language in the world</li>
                     <li>Object-oriented language</li>
                     <li>Used to create interactive effects within web browsers</li>
                     <li>Can interact with elements in the DOM</li>
+                    <li>A "weird, poorly designed" language"</li>
+                    <li>... that is everywhere</li>
                 </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Thermostat in Javascript</div>
-                <img src="assets/class09/thermostat-javascript.png" />
+                <div class="sub-title">Brief history of javascript</div>
+                <ul class="list">
+                    <li>Created in 10 days</li>
+                    <li>Released in 1995</li>
+                    <li>Currently version ES2017</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Javascript variables</div>
-                <img src="assets/class09/javascript-variables.png" />
+                <div class="sub-title">What can it do?</div>
+                <ul class="list">
+                    <li>Valdiate information</li>
+                    <li>Update html pages</li>
+                    <li>Add interactivity</li>
+                    <li>Add Animations</li>
+                    <li>Visualize data/art</li>
+                    <li>Many many more</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Javascript operators</div>
-                <img src="assets/class09/javascript-operators.png" />
+                <div class="sub-title">How is it added to html?</div>
+
+                <pre class="hljs"><code>
+        &lt;script type="text/javascript" src="PATH/FILENAME.js"&gt;
+        &lt;script type="text/javascript" src="js/main.js"&gt;
+                </code></pre>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Data Types</h1>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Javascript functions</div>
-                <img src="assets/class09/javascript-functions.png" />
+                <div class="sub-title">What are data types?</div>
+                <ul class="list">
+                    <li>Types of information provided by a programming language</li>
+                    <li>Building blocks of language</li>
+                    <li>What makes each language unique and better suited for different purposes</li>
+                </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Javascript Conditionals</div>
-                <img src="assets/class09/javascript-conditionals.png" />
+                <div class="sub-title">Some of the data types in javascipt</div>
+                <ul class="list">
+                    <li>string</li>
+                    <li>number</li>
+                    <li>boolean</li>
+                    <li>undefined</li>
+                    <li>null</li>
+                    <li>array</li>
+                    <li>object</li>
+                    <li>function</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Strings</div>
+                <p class="normal">A collection of letters. Could be a sentence, word, blog post</p>
+                <p class="normal">Letters need to be wrapped in single of double quote marks</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Strings - Example</div>
+                <pre class="hljs"><code>
+            "Hello World";
+
+            'This is also a string';
+
+            'It\'s sometimes confusing';
+
+            "Hello" + "world"; //Concatenation
+                </code></pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Numbers</div>
+                <p class="normal">Integers - whole numbers</p>
+                <p class="normal">Floats - decimal numbers</p>
+                <p class="normal">Does NOT use quotation marks</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Number - Example</div>
+                <pre class="hljs"><code>
+                1; //Integer
+
+                3.14; // Float
+    
+                -100;
+    
+                -100.1111111;
+                    </code></pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Boolean</div>
+                <p class="normal">Computer Science concept used to make decisions in code</p>
+                <p class="normal">Basically means
+                    <b>true</b> or
+                    <b>false</b>
+                </p>
+                <p class="normal">Does NOT use quotation marks</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Number - Example</div>
+                <pre class="hljs"><code>
+                    true;
+    
+                    false;
+                </code></pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Undefined and Null</div>
+                <p class="normal">Undefined means empty (empty is still a value! IMPORTANT!!)</p>
+                <p class="normal">Null means nothing</p>
+                <p class="normal">The person who invented the concept of null calls it the billion dollar mistake</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Arrays and Objects</div>
+                <p class="normal">
+                    An
+                    <b>Array</b> is an ordered list of data</p>
+                <p class="normal">
+                    An
+                    <b>Object</b> is a collection of key-value pairs</p>
+                <p class="normal">We will cover these in detail in the coming weeks</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Array/Object - Example</div>
+                <pre class="hljs"><code>
+        []; // Empty Array
+        [ "ITEM ONE", 'item two', 3 ]; // Array with items
+        {}; // Empty Object
+        { key: "value", name: "Serge" }; // Object with values
+                    </code></pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Functions</div>
+                <p class="normal">
+                    A way to make code repetitive and reusable
+                </p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Variables</div>
+                <p class="normal">Stores information in memory</p>
+                <p class="normal">You can change its value or access it later in a programs flow</p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Variables - Example</div>
+                <pre class="hljs"><code>
+        var name = "Evan Wallace"; 
+        var courseName = "FEWD"; 
+        var courseNumber = 34; 
+        var isThisJavaScript = true
+
+        console.log(name);
+                    </code></pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Naming Variables</div>
+                <p class="normal">"The hardest thing in software development is regex and naming things"</p>
+                <ul class="list">
+                    <li>Be descriptive!</li>
+                    <li>Use camelCase for multi word names</li>
+                    <li>Cant use <a href="http://www.javascripter.net/faq/reserved.htm">reserved</a> words</li>
+                </ul>
+            </section>
+
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Using javascript to target html</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Basics of using JS with HTML</div>
+                <pre><code>
+    document; // Javascript object that represents the DOM
+    document.getElementById("title"); // Query the document 
+                                      // object to find 
+                                      // an element with id "title"
+    var x = document.getElementById("title");
+    x.style.color = "red"; //Change css property of this element 
+                </code></pre>
             </section>
 
             <section class="topic" data-background-color="#FF8017">
@@ -228,7 +438,20 @@
 
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+
+    </script>
 </body>
 
 </html>
