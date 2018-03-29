@@ -25,6 +25,10 @@
     <div class="reveal">
         <div class="slides">
 
+            <section class="topic" data-background-color="black">
+                <h1>Mid-Course Survey</h1>
+            </section>
+
             <section id="title" data-background-color="black">
                 <div class="branding">
                     <img src="assets/general_assembly.png" />
@@ -104,7 +108,7 @@
                 </ul>
                 <pre><code class="hljs">
     var name = "Jo";  
-    name = "Amir" // The variable value has been changed to Amir
+    name = "Amir"; // The variable value has been changed to Amir
 
 </code></pre>
             </section>
@@ -133,9 +137,11 @@
                 </ul>
             </section>
 
-            <section class="exercise-slide" data-background-color="#FF8017">
+            <section class="topic" data-background-color="#FF8017">
                 <h1>EXERCISE: Score Keeper</h1>
-                <h2>Codepen.io/evkw - Score Keeper</h2>
+                <h2>
+                    <a href="https://codepen.io/evkw/pen/xYdjzr">Codepen.io/evkw - Score Keeper</a>
+                </h2>
             </section>
 
             <section class="detail-slide">
@@ -247,11 +253,6 @@
                 <img src="assets/class10/program-conditionals.png">
             </section>
 
-            <section class="exercise-slide" data-background-color="#FF8017">
-                <h1>EXERCISE: Compare That</h1>
-                <h2>Codepen.io/evkw - Compare That</h2>
-            </section>
-
             <section class="detail-slide">
                 <div class="sub-title">Are these equal</div>
                 <pre><code class="hljs">
@@ -359,15 +360,46 @@
 </code></pre>
             </section>
 
+
             <section class="detail-slide">
                 <div class="sub-title">Logical operators</div>
-                <p class="normal">It is possible to test for more than one condtion in the same if block</p>
+                <p class="normal">SWITCH statements allows you to change control flow to a large number of possibilities</p>
                 <pre><code class="hljs">
-    if (name == "GA"  && password == "YellowPencil"){
-        //Allow access to internet
+    switch (new Date().getDay()) {
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        default:
+            day = "some other day";
     }
-        
+            
+    </code></pre>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Logical operators</div>
+                <p class="normal">It is possible to test for more than one condition in the same if block</p>
+                <pre><code class="hljs">
+    if (name === "GA"  && password === "YellowPencil"){
+        //Allow access to internet
+    }     
 </code></pre>
+
+<p class="normal" style="text-align: center">These result in the same way</p>
+
+<pre><code class="hljs">
+        if (name === "GA"){
+            if(password === "YellowPencil") {
+                // Allow access to internet
+            }
+        }
+    </code></pre>
             </section>
 
             <section class="detail-slide">
@@ -378,25 +410,34 @@
             <section class="detail-slide">
                 <div class="sub-title">Logical operators</div>
                 <pre><code class="hljs">
-    if (day == "Tuesday"  || day == "Thursday"){
-        //We have class today
+    if (day === "Tuesday"  || day === "Thursday"){
+        // We have class today
     }
         
 </code></pre>
             </section>
+
 
             <section class="detail-slide">
                 <div class="sub-title">OR operator</div>
                 <img src="assets/class10/OR.png">
             </section>
 
-            <section class="exercise-slide" data-background-color="#FF8017">
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>EXERCISE: Compare That</h1>
+                <h2>
+                    <a href="https://codepen.io/evkw/pen/OQmZGG">Codepen.io/evkw - Compare That</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
                 <h1>EXERCISE: Black Out</h1>
-                <h2>Codepen.io/evkw - Black Out</h2>
+                <h2><a href="https://codepen.io/evkw/pen/eVWKOv">Codepen.io/evkw - Black Out</a></h2>
             </section>
 
             <section class="topic" data-background-color="#F33938">
-                <h1>lab time: Weather app</h1>
+                <h1>lab time: Citipix</h1>
             </section>
 
             <section class="topic" data-background-color="black">
@@ -411,9 +452,9 @@
             <section class="detail-slide">
                 <div class="sub-title">Extra Resources</div>
                 <ul class="list">
-                    <li>https://www.w3schools.com/js/js_if_else.asp</li>
-                    <li>https://www.w3schools.com/js/js_variables.asp</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var</li>
+                    <li><a href="https://www.w3schools.com/js/js_if_else.asp">w3schools if else</a></li>
+                    <li><a href="https://www.w3schools.com/js/js_variables.asp">w3Schools variables</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var">MDN variables</a></li>
                 </ul>
             </section>
 
@@ -431,7 +472,6 @@
                 <h1>Feedback time</h1>
                 <a href="ga.co/fewd34syd">ga.co/fewd34syd</a>
             </section>
-
         </div>
     </div>
 
