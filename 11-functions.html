@@ -10,13 +10,13 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -48,17 +48,9 @@
                 <ul class="list">
                     <li>Identify use of functions</li>
                     <li>Writing javascript functions</li>
+                    <li>Chat about software engineering principles</li>
+                    <li>Refactoring code using functions</li>
                     <li>Anonymous vs Named functions</li>
-                    <li>Lab time: Weather app</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Review Questions</div>
-                <ul class="list">
-                    <li class="fragment">What are the two multiple conditional statements called?</li>
-                    <li class="fragment">What are the two types of numbers in javascript?</li>
-                    <li class="fragment">How many conditional statements you name?</li>
                 </ul>
             </section>
 
@@ -70,60 +62,109 @@
                 <div class="sub-title">What are functions?</div>
                 <ul class="list">
                     <li>A reusable section of code that has a purpose and a name</li>
-                    <li>Can be called externally or internally</li>
+                    <li>Sometimes called methods or subroutines</li>
                     <li>Make code much more readable</li>
+                    <li>Basically when done right, it makes code beautiful</li>
                 </ul>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">What are functions?</div>
+                <div class="sub-title">What do they do?</div>
+                <p class="normal">They can perform any code!</p>
                 <ul class="list">
-                    <li>A reusable section of code that has a purpose and a name</li>
-                    <li>Can be called externally or internally</li>
-                    <li>Make code much more readable</li>
+                    <li>Calculations</li>
+                    <li>Animations</li>
+                    <li>Change CSS</li>
+                    <li>Communicate with a server</li>
+                    <li>Anything!</li>
                 </ul>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Defining functions</div>
                 <pre><code class="hljs">
-        function sayHello () {    
-            console.log( "Hello" ); 
-        } 
-        // A Function Declaration 
+            // A Function Declaration 
+            function sayHello() {    
+                console.log( "Hello" ); 
+            } 
+            
+            // A Function Expression
+            var sayHi = function() {    
+                console.log( "Hi" ); 
+            }; 
+            
+    </code></pre>
+            </section>
 
-        var sayHi = function () {    
-            console.log( "Hi" ); 
-        }; 
-        // A Function Expression
-
-</code></pre>
+            <section class="detail-slide">
+                <div class="sub-title">How are functions called</div>
+                <p class="normal">Unlike normal code, functions will not run until they are called.</p>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">How are functions called</div>
                 <pre><code class="hljs">
-    function sayHello () {    
-        console.log( "Hello!" ); 
-    } 
+        function sayHello() {    
+            console.log( "Hello!" ); 
+        } 
+        
+        sayHello(); // The callsite
     
-    sayHello(); // The callsite
+    </code></pre>
+            </section>
 
-</code></pre>
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Basic functions</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials/gp/1535978203">Schoology</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Parameters</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What are parameters?</div>
+                <p class="normal">The previous example functions are not dynamic</p>
+                <p class="normal">Adding parameters allow us to give some additional information to a function and allows us to create dynamic
+                    functionality
+                </p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Parameters</div>
+                <pre><code class="hljs">
+        function sayHello ( name ) {    
+            var greeting = "Hello " + name;    
+            console.log( greeting ); 
+        } 
+        
+        sayHello( "Fred" ); 
+        sayHello( "Bilbo" ); 
+        sayHello(); // ???
+            </code></pre>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">How are functions with parameters called?</div>
                 <pre><code class="hljs">
-        function multiply (num1, num2) {    
-            console.log( num1 * num2 ); 
-        } 
-
-        multiply(1);        // Returns error
-        multiply(1, 2, 3);  // Returns error
-        multiply(1, 5);     // Valid
+            function multiply (num1, num2) {    
+                console.log( num1 * num2 ); 
+            } 
     
-    </code></pre>
+            multiply(1);        
+            multiply(1, 2, 3); 
+            multiply(1, 5);     
+        
+        </code></pre>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Parameter functions</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials/gp/1535978203">Schoology</a>
+                </h2>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -141,14 +182,14 @@
             <section class="detail-slide">
                 <div class="sub-title">Return Values</div>
                 <pre><code class="hljs">
-    function multiply (num1, num2) {    
-        return num1 * num2; // return is a reserved word
-    } 
-
-    multiply(1, 5);     // Calls the function but value is lost
-    var result = multiply(1, 5); // result is set to 5
+        function multiply (num1, num2) {    
+            return num1 * num2; // return is a reserved word
+        } 
     
-    </code></pre>
+        multiply(1, 5);     // Calls the function but value is lost
+        var result = multiply(1, 5); // result is set to 5
+        
+        </code></pre>
             </section>
 
             <section class="detail-slide">
@@ -158,26 +199,107 @@
                     <li>It is always the last line executed of a return function</li>
                 </ul>
                 <pre><code class="hljs">
-    function multiply (num1, num2) {    
-        return num1 * num2;
-        console.log('value sent!') // Wont execute.
-    } 
-        
-        </code></pre>
+        function multiply (num1, num2) {    
+            return num1 * num2;
+            console.log('value sent!') // Wont execute.
+        } 
+            
+            </code></pre>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Return functions</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials/gp/1535978203">Schoology</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Software engineering principles</h1>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">ACTIVITY: Functions</div>
-                <div class="exercise">
-                    <img src="assets/exercise.svg" />
-                    <div class="instructions">
-                        <ol>
-                        </ol>
-                    </div>
-                </div>
+                <div class="sub-title">What are the principles?</div>
+                <ul class="list">
+                    <li class="fragment">
+                        <b>DRY</b> - Dont Repeat Yourself</li>
+                    <li class="fragment">
+                        <b>YAGNI</b> - You Ain't Gonna Need It</li>
+                    <li class="fragment">
+                        <b>KISS</b> - Keep It Super Simple</li>
+
+                    <li class="fragment">
+                        <b>Hint</b> - Talk about these in job interviews! It would score you bonus points with me</li>
+                </ul>
             </section>
 
-            <section class="exercise-slide" data-background-color="#FF8017">
+            <section class="detail-slide">
+                <div class="sub-title">DRY</div>
+                <p class="normal">Principle aimed at reducing repetition</p>
+                <ul class="list">
+                    <li>"Every piece of knowledge should have a single, unambiguous representation in the system"</li>
+                    <li>Allows for easier modifications to code because it should only happen in one place</li>
+                    <li>Violations of this principle is called WET code (waste everyone's time, write everything twice)</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Identifying violations</div>
+                <ul class="list">
+                    <li>If you copy and pasted a block of code, its probably violating the DRY principle</li>
+                    <li>If you do a modification to the system and it involves replacing the same parts of code in multiple files.
+                        Its probably a violation</li>
+                    <li>If a modification is visible in one part of the system but not in another (when expected). There has
+                        probably been a violation</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: DRY functions</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials/gp/1535978203">Schoology</a>
+                </h2>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">YAGNI</div>
+                <p class="normal">Basically, dont write code until its planned, budgeted and required</p>
+                <ul class="list">
+                    <li class="fragment">Writing code that will never be used sucks!</li>
+                    <li class="fragment">Writing code and finding out it's not needed sucks!</li>
+                    <li class="fragment">Writing code and finding out a client doesn't want it sucks!!</li>
+                    <li class="fragment">Wasting 8 months on a data migration process for corporate to scrap the idea.. SUCKS!!</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">KISS</div>
+                <p class="normal">Make functions easy to read by reducing their complexity</p>
+                <ul class="list">
+                    <li>Everyone function should do one thing and one thing well!</li>
+                    <li>Makes naming things easier if nothing else</li>
+                    <li>Makes code more testable (something you will have to worry about in the future)</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Identifying violations</div>
+                <ul class="list">
+                    <li>A function has too many lines (I try for under 30)</li>
+                    <li>Its hard to name a function, that generally means its doing more than one thing and needs a complicated
+                        name</li>
+                    <li>It takes more than 5 minutes to understand what its doing (this one is pretty subjective)</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: KISS functions</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials/gp/1535978203">Schoology</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
                 <h1>EXERCISE: Cash Register</h1>
                 <h2>Codepen.io/evkw - Cash Register</h2>
             </section>
@@ -191,12 +313,13 @@
                 <ul class="list">
                     <li>A function without a name</li>
                     <li>Can be used to execute code as soon as its loaded</li>
+                    <li>Can also be used to encapsulate a block of code so it is not visible to other blocks of code</li>
                 </ul>
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">Return Values</div>
-        <pre><code class="hljs">
+                <div class="sub-title">Anonymous Function</div>
+                <pre><code class="hljs">
             // Named function
             function hello() {
                 console.log("hello");
@@ -210,7 +333,7 @@
             hello();
         
         </code></pre>
-                </section>
+            </section>
 
             <section class="detail-slide">
                 <div class="sub-title">IIFE</div>
@@ -223,20 +346,20 @@
             </section>
 
             <section class="detail-slide">
-                    <div class="sub-title">IIFE Uses</div>
-        <pre><code class="hljs">
-            ( function () { 
+                <div class="sub-title">IIFE Uses</div>
+                <pre><code class="hljs">
+            (function () { 
                 var name = "Evan Wallace";
             })();
 
             console.log(name); // Throws an error
         
         </code></pre>
-                </section>
+            </section>
 
-                <section class="detail-slide">
-                        <div class="sub-title">IIFE Uses</div>
-            <pre><code class="hljs">
+            <section class="detail-slide">
+                <div class="sub-title">IIFE Uses</div>
+                <pre><code class="hljs">
         (function () { 
             doPageLoadLogic();
             callServer();
@@ -244,22 +367,13 @@
         })();
             
             </code></pre>
-                    </section>
-
-
-                <section class="detail-slide">
-                        <div class="sub-title">ACTIVITY: IIFEs</div>
-                        <div class="exercise">
-                            <img src="assets/exercise.svg" />
-                            <div class="instructions">
-                                <ol>
-                                </ol>
-                            </div>
-                        </div>
-                    </section>
+            </section>
 
             <section class="topic" data-background-color="#F33938">
-                <h1>lab time: Weather app part 2</h1>
+                <h1>lab time: function exercises</h1>
+                <h2>
+                    <a href="https://gist.github.com/evkw/fe43928a30d9207079d10ced7fd766f7">Gist</a>
+                </h2>
             </section>
 
             <section class="topic" data-background-color="black">
@@ -273,8 +387,9 @@
             <section class="detail-slide">
                 <div class="sub-title">Extra Resources</div>
                 <ul class="list">
-                    <li>https://www.w3schools.com/js/js_function_parameters.asp</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions</li>
+                    <li>
+                        <a href="https://code.tutsplus.com/tutorials/3-key-software-principles-you-must-understand--net-25161">Code Tuts on software principles</a>
+                    </li>
                 </ul>
             </section>
 

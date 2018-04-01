@@ -45,101 +45,11 @@
             <section class="detail-slide">
                 <div class="sub-title">Agenda</div>
                 <ul class="list">
+                    <li>Discuss Javascript arrays</li>
+                    <li>Discuss Javascript objects</li>
                     <li>Loops and why they are useful</li>
-                    <li>Disucss Javascript objects</li>
-                    <li>Disucss Javascript arrays</li>
+                    <li>Combining loops with arrays and objects</li>
                 </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Review Questions</div>
-                <ul class="list">
-                    <li class="fragment">What is a function?</li>
-                    <li class="fragment">What the values that go into a function called?</li>
-                    <li class="fragment">What is the difference between named and anonymous methods?</li>
-                </ul>
-            </section>
-
-            <section class="topic" data-background-color="#1EC9C6">
-                <h1>Loops</h1>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">What is a loop?</div>
-                <ul class="list">
-                    <li>Code that executes over and over again</li>
-                    <li>Can call functions and use conditionals</li>
-                    <li>Disucss Javascript arrays</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Types of loops</div>
-                <ul class="list">
-                    <li>for loop</li>
-                    <li>While loop</li>
-                    <li>foreach loop</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">For loop</div>
-                <p class="normal">Made up of 3 parts</p>
-                <ul class="list">
-                    <li>Start</li>
-                    <li>Number of loops</li>
-                    <li>Increment</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">For loop Example</div>
-                <pre><code class="hljs">
-    // Loops from 1 to 10
-   for( var 1 = 0; i &#62; 10; i++) {
-       console.log(i);
-   }
-
-   // Loops from 10 to 1
-   for(var count = 10; count > 0; current--) {
-       console.log(current);
-   }
-            
-                        </code></pre>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">While loop</div>
-                <ul class="list">
-                    <li>Only has condition</li>
-                    <li>Will loop while the condition is true</li>
-                    <li>Less used than the for loop because it can be more unpredictable</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">For loop Example</div>
-                <pre><code class="hljs">
-        // Loops from 1 to 10
-        var num = 0;
-        while(num &#62; 10;) {
-            num++;
-            console.log(num);
-        }
-          
-                </code></pre>
-
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">ACTIVITY: Loops</div>
-                <div class="exercise">
-                    <img src="assets/exercise.svg" />
-                    <div class="instructions">
-                        <ol>
-                        </ol>
-                    </div>
-                </div>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -159,8 +69,6 @@
                 <h1>Array</h1>
             </section>
 
-            <!-- image of array -->
-
             <section class="detail-slide">
                 <div class="sub-title">What is an array?</div>
                 <ul class="list">
@@ -171,44 +79,68 @@
                 </ul>
             </section>
 
+            <section class="detail-slide">
+                <div class="sub-title">Array visualisation</div>
+                <img src="assets/class12/array-simple.png">
+                <p class="normal">
+                    <b>IMPORTANT</b> arrays start at 0, not 1!
+                </p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Array visualisation</div>
+                <img src="assets/class12/array-indices.png">
+                <p class="normal">
+                    Each index indicates the location of a value in the array. It is also used to access a value from the array.
+                </p>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Array visualisation</div>
+                <img src="assets/class12/array-elements.png">
+                <p class="normal">
+                    Each element is basically a variable and is used to store some information in memory.
+                </p>
+            </section>
+
 
             <section class="detail-slide">
                 <div class="sub-title">Creating an array</div>
                 <pre><code class="hljs">
-    var emptyArray = [];
-    var randomNumbers = [ 12, 42, 1, 3, 92 ]; 
-    var rainbowColours = ['red', 'orange', 'yellow', 'green'];
-    var superHeroes = [
-            "Batman",
-            "Superman",
-            "Spiderman",
-            "Wonder woman",
-            "Black Widow",
-            "Hulk"
-    ];
-              
-                </code></pre>
+        var emptyArray = [];
+        var randomNumbers = [ 12, 42, 1, 3, 92 ]; 
+        var rainbowColours = ['red', 'orange', 'yellow', 'green'];
+        var superHeroes = [
+                "Batman",
+                "Superman",
+                "Spiderman",
+                "Wonder woman",
+                "Black Widow",
+                "Hulk"
+        ];
+                  
+                    </code></pre>
 
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Accessing Elements</div>
                 <pre><code class="hljs">
-  
-    var superHeroes = [
-            "Batman",
-            "Superman",
-            "Spiderman",
-            "Wonder woman",
-            "Black Widow",
-            "Hulk"
-    ];
-
-    superHeroes[0] // Batman
-    superHeroes[3] // Wonder woman
-    superHeroes[ superHeroes.length - 1] // Hulk
-                  
-                    </code></pre>
+      
+        var superHeroes = [
+                "Batman",
+                "Superman",
+                "Spiderman",
+                "Wonder woman",
+                "Black Widow",
+                "Hulk"
+        ];
+    
+        superHeroes[0] // Batman
+        superHeroes[3] // Wonder woman
+        superHeroes[ superHeroes.length - 1] // Hulk
+                      
+                        </code></pre>
 
             </section>
 
@@ -216,138 +148,52 @@
             <section class="detail-slide">
                 <div class="sub-title">Reassigning Elements</div>
                 <pre><code class="hljs">
-  
-    var superHeroes = [
-            "Batman",
-            "Superman",
-            "Spiderman",
-            "Wonder woman",
-            "Black Widow",
-            "Hulk"
-    ];
-
-    superHeroes[0] = "Daredevil"l;
-    superHeroes[3] = "Ms Marvel"; 
-    superHeroes[ superHeroes.length - 1] = "Scarlet Witch";
-                  
-                    </code></pre>
+      
+        var superHeroes = [
+                "Batman",
+                "Superman",
+                "Spiderman",
+                "Wonder woman",
+                "Black Widow",
+                "Hulk"
+        ];
+    
+        superHeroes[0] = "Daredevil"l;
+        superHeroes[3] = "Ms Marvel"; 
+        superHeroes[ superHeroes.length - 1] = "Scarlet Witch";
+                      
+                        </code></pre>
 
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Properties and methods</div>
                 <pre><code class="hljs">
-var superHeroes = [
-        "Batman",
-        "Superman",
-        "Spiderman"
-];
-
-superHeroes.length; // 3
-
-superHeroes.pop(); // Removes last element of array
-superHeroes.push(); // Adds element to end of array
-
-superHeroes.shift(); // Removes first element of array
-superHeroes.unshift("Wonder Woman"); // Add element to start
-
-superHeroes.indexOf("Superman") // Gets position of "Superman": 1
-                      
-                        </code></pre>
-
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Looping through an array Elements</div>
-                <pre><code class="hljs">
     var superHeroes = [
             "Batman",
             "Superman",
-            "Spiderman",
-            "Wonder woman",
-            "Black Widow",
-            "Hulk"
+            "Spiderman"
     ];
-
-    superHeroes[0];
-    superHeroes[1];
-    superHeroes[2];
-
-    // doing the same thing over and over. Candidate for a loop
-                      
-                        </code></pre>
-
-            </section>
-
-
-            <section class="detail-slide">
-                <div class="sub-title">Looping through an array Elements</div>
-                <pre><code class="hljs">
-    var superHeroes = [
-            "Batman",
-            "Superman",
-            "Spiderman",
-            "Wonder woman",
-            "Black Widow",
-            "Hulk"
-    ];
-
-    for(var i = 0; i &#62;= 6; i++) {
-        console.log(superHeroes[i]);
-    }
-                        </code></pre>
-
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Even better way</div>
-                <pre><code class="hljs"> 
-    var superHeroes = [
-            "Batman",
-            "Superman",
-            "Spiderman",
-            "Wonder woman",
-            "Black Widow",
-            "Hulk"
-    ];
-
-    for(var i = 0; i &#62;= superHeroes.length; i++) {
-        console.log(superHeroes[i]);
-    }
+    
+    superHeroes.length; // 3
+    
+    superHeroes.pop(); // Removes last element of array
+    superHeroes.push(); // Adds element to end of array
+    
+    superHeroes.shift(); // Removes first element of array
+    superHeroes.unshift("Wonder Woman"); // Add element to start
+    
+    superHeroes.indexOf("Superman") // Gets position of "Superman": 1
+                          
                             </code></pre>
 
             </section>
 
-            <section class="detail-slide">
-                <div class="sub-title">The way i use most often</div>
-                <pre><code class="hljs">
-    var superHeroes = [
-            "Batman",
-            "Superman",
-            "Spiderman",
-            "Wonder woman",
-            "Black Widow",
-            "Hulk"
-    ];
-
-    superHeroes.forEach(function(hero)
-    {
-        console.log(hero)
-    });
-                                </code></pre>
-
-            </section>
-
-
-            <section class="detail-slide">
-                <div class="sub-title">ACTIVITY: Arrays</div>
-                <div class="exercise">
-                    <img src="assets/exercise.svg" />
-                    <div class="instructions">
-                        <ol>
-                        </ol>
-                    </div>
-                </div>
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Simple arrays</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials?f=117287195">Schoology</a>
+                </h2>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -366,6 +212,7 @@ superHeroes.indexOf("Superman") // Gets position of "Superman": 1
 
             <section class="detail-slide">
                 <div class="sub-title">Why use them</div>
+                <p class="normal">Corner stone of the Object-oriented programming style</p>
                 <ul class="list">
                     <li>Groups similar functionality</li>
                     <li>Make code more readable by giving names to properties</li>
@@ -376,104 +223,294 @@ superHeroes.indexOf("Superman") // Gets position of "Superman": 1
             <section class="detail-slide">
                 <div class="sub-title">Creating objects</div>
                 <pre><code class="hljs">
-    var emptyObject = {};
-
-    var movie = {
-        name: "Jurrasic Park",
-        director: "Stephen Spielberg",
-        duration: 127
-    }
+        var emptyObject = {};
     
-    var bookSeries = {
-        name: "song of ice and fire",
-        author: "Geroge R. R. Martin",
-        books : [
-            "A game of thrones",
-            "A clash of kings",
-            "A Feast for crows",
-            "A Dance with dragons"
-        ]
-    };
-                 
-                    </code></pre>
-
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Accessing Values</div>
-                <pre><code class="hljs">
-    var movie = {
-        name: "Jurrasic Park",
-        director: "Stephen Spielberg",
-        duration: 127
-    }
-    
-    var movieName = movie.name;
-    var movieDirector = movie.director;
-    var movieDuration = movie.duration;
+        var movie = {
+            name: "Jurrasic Park",
+            director: "Stephen Spielberg",
+            duration: 127
+        }
+        
+        var bookSeries = {
+            name: "song of ice and fire",
+            author: "George R. R. Martin",
+            books : [
+                "A game of thrones",
+                "A clash of kings",
+                "A Feast for crows",
+                "A Dance with dragons"
+            ]
+        };
                      
                         </code></pre>
 
             </section>
 
             <section class="detail-slide">
+                <div class="sub-title">Accessing Values</div>
+                <pre><code class="hljs">
+        var movie = {
+            name: "Jurrasic Park",
+            director: "Stephen Spielberg",
+            duration: 127
+        }
+        
+        var movieName = movie.name;
+        var movieDirector = movie.director;
+        var movieDuration = movie.duration;
+                         
+                            </code></pre>
+
+            </section>
+
+            <section class="detail-slide">
                 <div class="sub-title">Changing Values</div>
                 <pre><code class="hljs">
-    var movie = {
-        name: "Jurrasic Park",
-        director: "Stephen Spielberg",
-        duration: 127
-    }
-    
-    movie.name = "Lost World";
-    movie.duration = 129;
-                
-                </code></pre>
+        var movie = {
+            name: "Jurrasic Park",
+            director: "Stephen Spielberg",
+            duration: 127
+        }
+        
+        movie.name = "Lost World";
+        movie.duration = 129;
+                    
+                    </code></pre>
 
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Adding new Values</div>
                 <pre><code class="hljs">    
-    var movie = {
-        name: "Jurrasic Park",
-        director: "Stephen Spielberg",
-        duration: 127
-    }
-    
-    movie.writer = "Michael Crichton";
-    movie.sequal = "The Lost World"
-                
-                </code></pre>
+        var movie = {
+            name: "Jurrasic Park",
+            director: "Stephen Spielberg",
+            duration: 127
+        }
+        
+        movie.writer = "Michael Crichton";
+        movie.sequel = "The Lost World"
+                    
+                    </code></pre>
 
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Nested Objects</div>
                 <pre><code class="hljs">    
-    var movie = {,
-        name: "Jurrasic Park",
-        director: "Stephen Spielberg"
-        duration: 127,
-        imdbInfo: {
-            rating: 6.5,
-            link: "http://www.imdb.com/title/tt0119567/";
+        var movie = {,
+            name: "Jurrasic Park",
+            director: "Stephen Spielberg"
+            duration: 127,
+            imdbInfo: {
+                rating: 6.5,
+                link: "http://www.imdb.com/title/tt0119567/";
+            }
         }
-    }
-                
-                </code></pre>
+                    
+                    </code></pre>
+
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Objects</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials?f=117287195">Schoology</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Loops</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What is a loop?</div>
+                <ul class="list">
+                    <li>Code that executes over and over again</li>
+                    <li>Can call functions and use conditionals</li>
+                </ul>
+            </section>
+
+
+            <section class="detail-slide">
+                <div class="sub-title">What are loops made up of</div>
+                <p class="normal"> Loops must contain each of these three properties</p>
+                <ol class="list">
+                    <li>Starting point</li>
+                    <li>Increment (or step)</li>
+                    <li>Ending point</li>
+                </ol>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Types of loops</div>
+                <ul class="list">
+                    <li>for loop</li>
+                    <li>While loop</li>
+                    <li>foreach loop</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">For loop</div>
+                <p class="normal">Made up of 3 parts</p>
+                <pre><code>
+        for (statement 1; statement 2; statement 3) {
+            code block to be executed
+        }
+               </code></pre>
+                <ul class="list">
+                    <li>
+                        <b>Statement 1</b> sets a variable before the loop starts</li>
+                    <li>
+                        <b>Statement 2</b> defines the condition for the loop to run</li>
+                    <li>
+                        <b>Statement 3</b> increases a value each time the code block in the loop has been executed</li>
+                </ul>
 
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">ACTIVITY:</div>
-                <div class="exercise">
-                    <img src="assets/exercise.svg" />
-                    <div class="instructions">
-                        <ol>
-                        </ol>
-                    </div>
-                </div>
+                <div class="sub-title">For loop</div>
+                <pre><code>
+        for (i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+                   </code></pre>
+                <ul class="list">
+                    <li>
+                        <b>Statement 1</b> - Set start of loop (var i = 0)</li>
+                    <li>
+                        <b>Statement 2</b> - Create loop condition (i must be less than 5)</li>
+                    <li>
+                        <b>Statement 3</b> - Step through loop (i++)</li>
+                </ul>
+
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">For loop Example</div>
+                <pre><code class="hljs">
+    // Loops from 1 to 10
+   for( var i = 0; i &#62; 10; i++) {
+       console.log(i);
+   }
+
+   // Loops from 10 to 1
+   for(var count = 10; count > 0; current--) {
+       console.log(current);
+   }
+            
+                        </code></pre>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: For loop</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials?f=117287195">Schoology</a>
+                </h2>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">While loop</div>
+                <ul class="list">
+                    <li>Only has condition</li>
+                    <li>Will loop while the condition is true</li>
+                    <li>Useful when not knowing how many times you want to loop</li>
+                    <li>Can be a bit more unpredictable</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">For loop Example</div>
+                <pre><code class="hljs">
+        // Loops from 1 to 10
+        var num = 0;
+        while(num &#62; 10) {
+            num++;
+            console.log(num);
+        }
+          
+                </code></pre>
+
+            </section>
+
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: While loop</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials?f=117287195">Schoology</a>
+                </h2>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Looping through an array Elements</div>
+                <pre><code class="hljs">
+            var superHeroes = [
+                    "Batman",
+                    "Superman",
+                    "Spiderman",
+                    "Wonder woman",
+                    "Black Widow",
+                    "Hulk"
+            ];
+        
+            for(var i = 0; i &#62;= 6; i++) {
+                console.log(superHeroes[i]);
+            }
+                                </code></pre>
+
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Even better way</div>
+                <pre><code class="hljs"> 
+            var superHeroes = [
+                    "Batman",
+                    "Superman",
+                    "Spiderman",
+                    "Wonder woman",
+                    "Black Widow",
+                    "Hulk"
+            ];
+        
+            for(var i = 0; i &#62;= superHeroes.length; i++) {
+                console.log(superHeroes[i]);
+            }
+                                    </code></pre>
+
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">The way i use most often</div>
+                <pre><code class="hljs">
+            var superHeroes = [
+                    "Batman",
+                    "Superman",
+                    "Spiderman",
+                    "Wonder woman",
+                    "Black Widow",
+                    "Hulk"
+            ];
+        
+            superHeroes.forEach(function(hero)
+            {
+                console.log(hero)
+            });
+                                        </code></pre>
+
+            </section>
+
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Foreach</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials?f=117287195">Schoology</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#F33938">
+                <h1>lab time: Citipix part 2</h1>
             </section>
 
             <section class="topic" data-background-color="black">
@@ -483,17 +520,6 @@ superHeroes.indexOf("Superman") // Gets position of "Superman": 1
             <section class="topic" data-background-color="#FFD800">
                 <h1>Q & A</h1>
             </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Extra Resources</div>
-                <ul class="list">
-                    <li>https://www.w3schools.com/js/js_loop_for.asp</li>
-                    <li>https://www.w3schools.com/js/js_loop_while.asp</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array</li>
-                </ul>
-            </section>
-
 
             <section class="detail-slide">
                 <div class="sub-title">Next Class: jquery</div>
@@ -513,7 +539,20 @@ superHeroes.indexOf("Superman") // Gets position of "Superman": 1
 
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+
+    </script>
 </body>
 
 </html>
