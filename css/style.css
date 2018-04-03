@@ -42,7 +42,7 @@
     max-height: 600px;
 }
 
-ul.list {
+ul.list, ol.list {
     width: 100%;
 }
 
