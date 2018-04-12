@@ -35,16 +35,17 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Learning Objectives</div>
+                <div class="sub-title">Agenda</div>
                 <ul class="list">
+                    <li>Practice jQuery</li>
                 </ul>
             </section>
 
-            <section class="detail-slide">
-                <div class="sub-title"></div>
-
-                <ul class="list">
-                </ul>
+            <section class="topic" data-background-color="#F33938">
+                <h1>lab time: Relaxr Part 4</h1>
+                <h2>
+                    <a href="https://app.schoology.com/course/1339144725/materials?f=115738463">Schoology</a>
+                </h2>
             </section>
 
             <section class="topic" data-background-color="black">
@@ -53,12 +54,6 @@
 
             <section class="topic" data-background-color="#FFD800">
                 <h1>Q & A</h1>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Extra Resources</div>
-                <ul class="list">
-                </ul>
             </section>
 
             <section class="detail-slide">
@@ -82,7 +77,20 @@
 
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+
+    </script>
 </body>
 
 </html>
