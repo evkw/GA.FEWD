@@ -18,6 +18,9 @@
 .reveal blockquote {
     box-shadow: none;
 }
+.reaveal section h6 {
+    font-size: 0.5em;
+}
 
 .reveal section img {
     background: none !important;

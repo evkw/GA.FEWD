@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
     <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css">
     <link rel="stylesheet" href="css/zenburn.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
 
     <script>
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.type = 'text/css';
-            link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
-            document.getElementsByTagName('head')[0].appendChild(link);
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-    
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -35,32 +36,18 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Learning Objectives</div>
-                <ul class="list">
-                    <li>Differentiate the different types of inputs and why/where we would use each</li>
-                    <li>Explain how to group elements by name</li>
-                    <li>Perform pseudo-styling of input elements that the browser won't let us directly style</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
                 <div class="sub-title">AGENDA</div>
                 <ul class="list">
                     <li>Review the different input types</li>
+                    <li>Create a HTML form</li>
                     <li>Styling a form</li>
                     <li>Validating form inputs</li>
-                    <li>Create a HTML form</li>
                     <li>Lab time: Style and validate a form</li>
                 </ul>
             </section>
 
-            <section class="topic" data-background-color="#1EC9C6">
-                <h1>Form element</h1>
-            </section>
-
             <section class="detail-slide">
-                <div class="sub-title"></div>
-                <h1>What does a from add to a website?</h1>
+                <div class="sub-title">What does a from add to a website?</div>
                 <ul class="list">
                     <li>Form is a section of the page that contains interactive controls</li>
                     <li>Allows a user to send information to a server</li>
@@ -69,76 +56,276 @@
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Form Types</div>
-                <img src="assets/class15/form-type.png">
+                <div class="sub-title">Challenges of a building a good form?</div>
+                <ul class="list">
+                    <li class="fragment">Needs to be easy to understand</li>
+                    <li class="fragment">Needs to be short. The longer the form, the less likely users will complete it.</li>
+                    <li class="fragment">Ensure the data you retrieve from a form is valid and consistent</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Form element</h1>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Form Types</div>
-                <img src="assets/class15/form-type-2.png">
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Form Names</div>
-                <img src="assets/class15/form-name.png">
+                <div class="sub-title">Input</div>
+                <p class="normal">Used to enter text values</p>
+                <pre class="hljs"><code>
+    <form>
+        <input type="text">
+        <input type="password">
+        <input type="email">
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <input type="text">
+                    <input type="password">
+                    <input type="email">
+                </form>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Placeholders</div>
-                <img src="assets/class15/placeholder.png">
+                <p class="normal">Gives your use a hint about what you are asking them to enter</p>
+                <pre class="hljs"><code>
+    <form>
+        <input type="text" placeholder="Name">
+        <input type="password" placeholder="Password">
+        <input type="email" placeholder="Email">
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <input type="text" placeholder="Name">
+                    <input type="password" placeholder="Password">
+                    <input type="email" placeholder="Email">
+                </form>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Required</div>
-                <img src="assets/class15/form-required.png">
+                <p class="normal">Used when there is information you must grab from a user</p>
+                <pre class="hljs"><code>
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="password" placeholder="Password" required> 
+        <input type="email" placeholder="Email" required>
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <input type="text" placeholder="Name" required>
+                    <input type="password" placeholder="Password" required>
+                    <input type="email" placeholder="Email" required>
+                    <button>Submit</button>
+                </form>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Value</div>
-                <img src="assets/class15/form-value.png">
+                <p class="normal">We've gotten this a lot already. You are also able to set it.</p>
+                <pre class="hljs"><code>
+    <form>
+        <input type="text" value="Evan Wallace">
+        <input type="email" value="evan.wallace@hello.com">
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <input type="text" value="Evan Wallace">
+                    <input type="email" value="evan.wallace@hello.com">
+                </form>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">length</div>
-                <img src="assets/class15/form-max-length.png">
+                <div class="sub-title">Max/Min Length</div>
+                <p class="normal">Easy way to force users to enter data in a predictable way</p>
+                <pre class="hljs"><code>
+    <form>
+        <input type="text" placeholder="Name" minlength="5">
+        <input type="email" placeholder="Email" maxlength="9">
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <input type="text" placeholder="Name" minlength="5">
+                    <input type="email" placeholder="Email" maxlength="9">
+                    <button>Submit</button>
+                </form>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Textarea</div>
-                <img src="assets/class15/form-textarea.png">
+                <p class="normal">Sometimes you need more space for users to enter larger amounts of text</p>
+                <pre class="hljs"><code>
+    <form>
+        <textarea rows="4" cols="50"></textarea>
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <textarea rows="4" cols="50"></textarea>
+                </form>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Textarea Cont.</div>
+                <p class="normal">Usually you dont want your uses resizing the text area</p>
+                <pre class="hljs"><code>
+    <form>
+        <textarea rows="4" cols="50" style="resize:none"></textarea>
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <textarea rows="4" cols="50" style="resize:none"></textarea>
+                </form>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Radio</div>
+                <p class="normal">Useful for choosing from a predefined list.
+                    <br> Used for small selection set.
+                    <br>No multiple select.</p>
+                <pre class="hljs"><code>
+    <form>
+        <input type="radio" name="direction" value="north">North
+        <input type="radio" name="direction" value="south">South
+        <input type="radio" name="direction" value="east">East
+        <input type="radio" name="direction" value="west">West
+    </form>
+                </code></pre>
+                <hr>
+                <form style="font-size:0.5em; font-weight: normal">
+                    <input type="radio" name="direction" value="north">North
+                    <input type="radio" name="direction" value="south">south
+                    <input type="radio" name="direction" value="east">East
+                    <input type="radio" name="direction" value="west">West
+                </form>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Checkbox</div>
+                <p class="normal">Also useful for choosing from a predefined list.
+                    <br>Built with multiple select in mind</p>
+                <pre class="hljs"><code>
+    <form>
+        <input type="checkbox" name="direction" value="north">North
+        <input type="checkbox" name="direction" value="south">South
+        <input type="checkbox" name="direction" value="east">East
+        <input type="checkbox" name="direction" value="west">West
+    </form>
+                </code></pre>
+                <hr>
+                <form style="font-size:0.5em; font-weight: normal">
+                    <input type="checkbox" name="direction" value="north">North
+                    <input type="checkbox" name="direction" value="south">south
+                    <input type="checkbox" name="direction" value="east">East
+                    <input type="checkbox" name="direction" value="west">West
+                </form>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Select</div>
-                <img src="assets/class15/form-select.png">
+                <p class="normal">Does the same job as radio and checkbox.
+                    <br>Used when theres a large number of options</p>
+                <pre class="hljs"><code>
+    <form>
+        <select>
+            <option value="NSW">New South Wales</option>
+            <option value="QLD">Queensland</option>
+            <option value="VIC">Victoria</option>
+        </select>
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <select>
+                        <option value="NSW">New South Wales</option>
+                        <option value="QLD">Queensland</option>
+                        <option value="VIC">Victoria</option>
+                    </select>
+                </form>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Radio Buttons</div>
-                <img src="assets/class15/form-radio.png">
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Check Box</div>
-                <img src="assets/class15/form-checkbox.png">
+                <div class="sub-title">Select cont</div>
+                <p class="normal">Has a mode for selecting multiple values</p>
+                <pre class="hljs"><code>
+    <form>
+        <select multiple>
+            <option value="NSW">New South Wales</option>
+            <option value="QLD">Queensland</option>
+            <option value="VIC">Victoria</option>
+        </select>
+    </form>
+                </code></pre>
+                <hr>
+                <form>
+                    <select multiple>
+                        <option value="NSW">New South Wales</option>
+                        <option value="QLD">Queensland</option>
+                        <option value="VIC">Victoria</option>
+                    </select>
+                </form>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Form Label</div>
-                <img src="assets/class15/form-label.png">
+                <ul class="list">
+                    <li>Allows users to select the label as well as the control.</li>
+                    <li>Targets the Id of a form element.</li>
+                    <li>Can be used on all form elements.</li>
+                </ul>
+                <pre class="hljs"><code>
+    <form>
+        <input type="checkbox" name="vehicle" id="bike" value="bike">
+        <label for="bike">Bike</label>
+        <input type="checkbox" name="vehicle" id="car" value="car">
+        <label for="car">Car</label>
+    </form>
+                </code></pre>
+                <hr>
+                <form style="font-size:0.5em; font-weight: normal">
+                    <input type="checkbox" name="vehicle" id="bike" value="bike">
+                    <label for="bike">Bike</label>
+                    <input type="checkbox" name="vehicle" id="car" value="car">
+                    <label for="car">Car</label>
+                </form>
             </section>
 
             <section class="detail-slide">
-                <div class="sub-title">Form buttons</div>
-                <img src="assets/class15/form-buttons.png">
+                <div class="sub-title">Form Button</div>
+                <ul class="list" style="font-size:0.75em">
+                    <li>Two types of form buttons</li>
+                    <li>Reset - Sets the form back to what it was before users entered anything</li>
+                    <li>Submit - Submits form info to a server (via onsubmit function)</li>
+                </ul>
+                <pre class="hljs"><code>
+        <form onsubmit="submitForm()">
+            <input placeholder="name">
+            <input type="email" placeholder="email">
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </form>
+                    </code></pre>
+                <hr>
+                <a style="font-size: 0.75em" href="https://codepen.io/evkw/pen/LdKbPo?editors=1010">Code pen example</a>
             </section>
 
             <section class="detail-slide">
                 <div class="sub-title">Form element reference</div>
                 <ul class="list">
-                    <li>nativeformelements.com</li>
-                    <li>Handy reference to see what form elements are available</li>
+                    <li>
+                        <a href="http://nativeformelements.com">Great reference guide</a>
+                    </li>
                 </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Create a basic form</h1>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -146,12 +333,29 @@
             </section>
 
             <section class="detail-slide">
+                    <div class="sub-title">Using native elements</div>
+                    <ul class="list">
+                        <li>Using the native form elements can scare off users</li>
+                        <li>There are lots of libraries to help style forms</li>
+                        <li><a href="http://getbootstrap.com">Bootstrap</a></li>
+                        <li><a href="http://materializecss.com/">Materialize</a></li>
+                        <li>Mixing and matching form elements tends to not look great</li>
+                    </ul>
+                </section>
+
+            <section class="detail-slide">
                 <div class="sub-title">Bootstrap</div>
                 <ul class="list">
-                    <li>http://getbootstrap.com</li>
+                    <li><a href="http://getbootstrap.com">CDN Links here</a></li>
                     <li>CSS and javascript library. Very popular for styling websites quickly</li>
+                    <li>Built on-top of jQuery</li>
                     <li>CSS Section does not require jQuery</li>
+                    <li>Uses CSS classes to style HTML elements</li>
                 </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Styling with bootstrap</h1>
             </section>
 
             <section class="topic" data-background-color="#1EC9C6">
@@ -159,17 +363,32 @@
             </section>
 
             <section class="detail-slide">
+                <div class="sub-title">Using a library vs Native validation</div>
+                <ul class="list">
+                    <li class="fragment">Native validation can have differing results browser to browser</li>
+                    <li class="fragment">IE does required well but thats about it</li>
+                    <li class="fragment">Third party libraries are made to be consistent across browsers</li>
+                    <li class="fragment">Consistency is king. We really like consistent behaviour</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
                 <div class="sub-title">Parsley.js</div>
                 <ul class="list">
-                    <li>http://parsleyjs.org</li>
+                    <li><a href="http://parsleyjs.org">Download from here</a></li>
                     <li>Javascript library to help simplify form validation</li>
                     <li>Provides feedback on the form for users to correct errors</li>
                     <li>Requires jQuery</li>
                 </ul>
             </section>
 
+            <section class="topic" data-background-color="#FF8017">
+                <h1>CODE ALONG: Validating with Parsley</h1>
+            </section>
+
             <section class="topic" data-background-color="#F33938">
-                <h1>lab time: Style and Validate form</h1>
+                <h1>lab time: Create a feedback form!</h1>
+                <h2><a href="https://gist.github.com/evkw/0a6dd2edb638268e310bc70cb423bd83">Instructions</a></h2>
             </section>
 
             <section class="topic" data-background-color="black">
@@ -183,8 +402,10 @@
             <section class="detail-slide">
                 <div class="sub-title">Extra Resources</div>
                 <ul class="list">
-                    <li>https://www.w3schools.com/html/html_forms.asp</li>
-                    <li>https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form</li>
+                    <li><a href="https://www.w3schools.com/html/html_forms.asp">w3Schools article about forms</a></li>
+                    <li><a href="http://materializecss.com/">Materialize</a></li>
+                    <li><a href="https://getbootstrap.com/">Bootstrap</a></li>
+                    <li><a href="http://parsleyjs.org/">ParsleyJs</a></li>
                 </ul>
             </section>
 
@@ -199,10 +420,23 @@
 
         </div>
     </div>
-
+    <script src="js/submit.js"></script>
     <script src="js/head.min.js"></script>
     <script src="js/reveal.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+
+    </script>
 </body>
 
 </html>
