@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>FEWD: Class 16</title>
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="css/zenburn.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <section id="title" data-background-color="black">
+                <div class="branding">
+                    <img src="assets/general_assembly.png" />
+                </div>
+                <h1>Class 17: Github</h1>
+                <h2>Evan Wallace</h2>
+                <h3>Senior Software Developer - Berkley Insurance Australia</h3>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Agenda</div>
+                <ul class="list">
+                    <li>What is Git/Github?</li>
+                    <li>Terminology</li>
+                    <li>Practice!</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Git/github</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What is version control?</div>
+                <ul class="list">
+                    <li class="fragment">System to record changes to a file or set of files</li>
+                    <li class="fragment">Super useful to help fix any errors</li>
+                    <li class="fragment">Great tool for pointing the figure at someone when something goes wrong</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What is git?</div>
+                <ul class="list">
+                    <li class="fragment">Version control system</li>
+                    <li class="fragment">Tiny program that is lightning fast</li>
+                    <li class="fragment">Industry standard for storing and collaborating with code</li>
+                    <li class="fragment">Free and open source</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What is github?</div>
+                <ul class="list">
+                    <li class="fragment">Service that uses git</li>
+                    <li class="fragment">Similar to Dropbox or Google drive, but for code</li>
+                    <li class="fragment">Free for average users</li>
+                    <li class="fragment">Amazing tools for reaching out to the developer community</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Exercise: Sign up for github</h1>
+                <h2>
+                    <a href="https://github.com/">github.com</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Exercise: Install Github UI</h1>
+                <h2>
+                    <a href="https://desktop.github.com/">desktop.github</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Terminology</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">The buzz words!</div>
+                <ul class="list">
+                    <li class="fragment">Repository</li>
+                    <li class="fragment">Branch</li>
+                    <li class="fragment">Commit</li>
+                    <li class="fragment">Push Pull</li>
+                    <li class="fragment">Merge / Pull Request</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Repository</div>
+                <ul class="list">
+                    <li>Data structure used to store files</li>
+                    <li>Synonym for project</li>
+                    <li>A project has 1 repository</li>
+                    <li>The repository usually lives on a server (like github)</li>
+                    <li>A team of developers have a copy of this repository and make changes there</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Create a repository</h1>
+                <h2>Git hub UI</h2>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Branch</div>
+                <ul class="list">
+                    <li>Branches are copies of your code that you can change in isolation</li>
+                    <li>Isolation is important. Developers create branches for each new feature, enhancement or bug fix they
+                        make to a repository</li>
+                    <li>This allows other developers the change to review/collaborate</li>
+                    <li>Repositories always start with a master branch</li>
+                    <li>Repositories can have many branches (it gets messy when there are too many though)</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Create a branch</h1>
+                <h2>Git hub UI</h2>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Commit</div>
+                <ul class="list">
+                    <li>A commit is a bunch of work (code changes)</li>
+                    <li>Git requires you to add a commit, this helps you know what work was done</li>
+                    <li>Commits also mark who created them, which is a great tool to blame people when something goes wrong</li>
+                    <li>A branch usually has a few commits</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Create a commit</h1>
+                <h2>Git hub UI</h2>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Merging Branches</div>
+                <ul class="list">
+                    <li>All roads lead to rome, All branches (should) merge to master</li>
+                    <li>Once a block of work is finished you want to add those changes to master</li>
+                    <li>This allows the rest of your team to have access to your changes</li>
+                    <li>Once the branch is merged, its good practice to delete the feature branch</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Master Branch</div>
+                <ul class="list">
+                    <li>Represents the latest code in a project</li>
+                    <li>Most projects dont allow developers to commit directly to master</li>
+                    <li>Master is just the default that git uses. You can name your default branch whatever you want.</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Git visualization</div>
+                <img src="assets/class17/git-flow.png">
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Merging Branches</h1>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Guided Tour of Github.com</h1>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Forking Repositories</h1>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code Along: Clone repository</h1>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Push Changes</h1>
+            </section>
+
+
+            <section class="topic" data-background-color="black">
+                <h1>Wrap up</h1>
+            </section>
+
+            <section class="topic" data-background-color="#FFD800">
+                <h1>Q & A</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Next Class</div>
+                <h4>Project lab</h4>
+                <ul class="list">
+                    <li>Work on assignment</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="black">
+                <h1>Feedback time</h1>
+                <a href="ga.co/fewd34syd">ga.co/fewd34syd</a>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
