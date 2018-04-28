@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>FEWD: Class 19</title>
+    <link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="node_modules/reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="css/zenburn.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'node_modules/reveal.js/css/print/pdf.css' : 'node_modules/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <section id="title" data-background-color="black">
+                <div class="branding">
+                    <img src="assets/general_assembly.png" />
+                </div>
+                <h1>Class 19: Animations</h1>
+                <h2>Evan Wallace</h2>
+                <h3>Senior Software Developer - Berkley Insurance Australia</h3>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Agenda</div>
+                <ul class="list">
+                    <li>Animations and why they are important</li>
+                    <li>CSS animations</li>
+                    <li>Web hosting</li>
+                    <li>Domains</li>
+                    <li>Practice!</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Why animations?</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Why Animations?</div>
+                <ul class="list">
+                    <li class="fragment">We evolved to excel at noticing movement</li>
+                    <li class="fragment">Using movement and visual cues, we are able to understand complex actions</li>
+                    <li class="fragment">Web animations leverage that understanding</li>
+                    <li class="fragment">Helps make a deeper connection between user and website</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Some technical reasons to use animations</div>
+                <ul class="list">
+                    <li class="fragment">Loading page > white page when loading large files</li>
+                    <li class="fragment">Spinner > nothing when processing a request on a server</li>
+                    <li class="fragment">Bouncy elements to highlight errors or call to actions</li>
+                    <li class="fragment">So many more!</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>CSS animations</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">CSS Properties</div>
+                <ul class="list">
+                    <li>@keyframes</li>
+                    <li>animation-name</li>
+                    <li>animation-delay</li>
+                    <li>animation-duration</li>
+                    <li>animation-iteration-count</li>
+                    <li>animation</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">@keyframes</div>
+
+                <pre><code>
+        @keyframes slidein {
+            from {
+                margin-left: 100%;
+                width: 300%;
+            }
+            
+            to {
+                margin-left: 0%;
+                width: 100%;
+            }
+        }
+                </code></pre>
+                <ul class="list">
+                    <li>Controls the steps between animation frames</li>
+                    <li>Can use % or to-from</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">@keyframes cont</div>
+
+                <pre><code>
+            @keyframes identifier {
+                0% { top: 0; left: 0; }
+                30% { top: 50px; }
+                68% { left: 50px; }
+                100% { top: 100px; left: 100%; }
+            }
+                    </code></pre>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code along: keyframes</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">animation-name</div>
+
+                <pre><code>
+    @keyframes identifier {
+        0% { top: 0; left: 0; }
+        100% { top: 100px; left: 100%; }
+    }
+
+    #animated-thing {
+        animation-name: identifier;
+    }
+                        </code></pre>
+                <ul class="list">
+                    <li>Uses the keyframe name to know which animation to use</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code along: animation-name</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">animation-delay</div>
+
+                <pre><code>
+    #animated-thing {
+        animation-name: cool-animation;
+        animation-delay: 3s;
+    }
+                            </code></pre>
+                <ul class="list">
+                    <li>Allows you to delay the start of an animation.</li>
+                    <li>Useful for orchestrating a few animations on a page</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code along: animation-delay</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">animation-duration</div>
+
+                <pre><code>
+    #animated-thing {
+        animation-name: cool-animation;
+        animation-duration: 3s;
+    }
+                </code></pre>
+                <ul class="list">
+                    <li>Time it takes animation to animate one cycle</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code along: animation-duration</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">animation-iteration-count</div>
+
+                <pre><code>
+        #animated-thing {
+            animation-name: cool-animation;
+            animation-iteration-count: infinite;
+        }
+                    </code></pre>
+                <ul class="list">
+                    <li>Number of times animation will cycle</li>
+                    <li>Default value is 1</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code along: animation-iteration-count</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">animation</div>
+
+                <pre><code>
+        #animated-thing {
+            animation: slidein 3s linear 1s infinite running;
+        }
+                
+                        </code></pre>
+                <ul class="list">
+                    <li>Shorthand for all the animation properties</li>
+                    <li>Can sometimes be confusing which thing represents what</li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code along: animation</h1>
+            </section>
+
+
+            <section class="detail-slide">
+                <div class="sub-title">Some helpful links</div>
+                <ul class="list" style="font-size: 0.75em">
+                    <li>
+                        <a href="http://canianimate.com/">canianimate</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/daneden/animate.css">Animate</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/juliangarnier/anime">Anime</a>
+                    </li>
+                    <li>
+                        <a href="http://animista.net/">Animista.net</a>
+                    </li>
+                    <li>
+                        <a href="http://dynamicsjs.com/">Dynamics.js</a>
+                    </li>
+                    <li>
+                        <a href="http://greensock.com/">GreenSock-JS</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/miniMAC/magic">Magic</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/CreateJS/TweenJS">TweenJS</a>
+                    </li>
+                    <li>
+                        <a href="http://julian.com/research/velocity/">Velocity.js</a>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Domains</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">What is a domain name?</div>
+                <ul class="list">
+                    <li>User friendly address for your server</li>
+                    <li>Has to be unique</li>
+                    <li>Examples</li>
+                    <ul class="list">
+                        <li>www.google.com</li>
+                        <li>generalassemb.ly</li>
+                    </ul>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Types of domains</div>
+                <ul class="list">
+                    <li>Top level domain (.com, .org, .gov)</li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains">Country level domain (.au, .uk, .io)</a>
+                    </li>
+                    <li>
+                        <a href="https://en.wikipedia.org/wiki/Subdomain">Sub domains</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#1EC9C6">
+                <h1>Hosting</h1>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Types of Hosting</div>
+                <ul class="list">
+                    <li>Shared</li>
+                    <li>Virtual Private Server</li>
+                    <li>Dedicated</li>
+                    <li>Cloud</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Shared</div>
+                <ul class="list">
+                    <li>One server with many websites</li>
+                    <li>Server resources are shared (RAM, Hard drive etc)</li>
+                    <li>Usually the cheapest option</li>
+                    <li>Easy to set up</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Virtual Private Server</div>
+                <ul class="list">
+                    <li>One server set up to be many virtual servers</li>
+                    <li>Shared physical resources but more control/security</li>
+                    <li>Good balance of price and control</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Dedicated Server</div>
+                <ul class="list">
+                    <li>One server with one website on it</li>
+                    <li>Very performant</li>
+                    <li>Highest level of control and security</li>
+                    <li>Most expensive</li>
+                    <li>Tends to be overkill of simple websites</li>
+                    <li>You often need to manage the security yourself</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Cloud Hosting</div>
+                <ul class="list">
+                    <li>Lots of servers working together</li>
+                    <li>Best reliability and performance</li>
+                    <li>Lots of options for hosting</li>
+                    <li>Very scalable</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">How do you decide?</div>
+                <ul class="list">
+                    <li class="fragment">Uptime?</li>
+                    <li class="fragment">Support?</li>
+                    <li class="fragment">Bandwidth?</li>
+                    <li class="fragment">Price?</li>
+                    <li class="fragment">Data Storage?</li>
+                    <li class="fragment">Scalability?</li>
+                    <li class="fragment">Control?</li>
+                    <li class="fragment">Location?</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Finding domains</div>
+                <ul class="list">
+                    <li>
+                        <a href="https://domainr.com/">Domainr</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Buying domains</div>
+                <ul class="list">
+                    <li>
+                        <a href="https://mediatemple.net">MediaTemple</a>
+                    </li>
+                    <li>
+                        <a href="https://au.godaddy.com/">GoDaddy</a>
+                    </li>
+                    <li>
+                        <a href="https://www.crazydomains.com.au/">CrazyDomains</a>
+                    </li>
+                    <li>
+                        <a href="https://www.bluehost.com">BlueHost</a>
+                    </li>
+                    <li>
+                        <a href="https://domainr.com/">Domainr</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Using a domain and hosting service</div>
+                <ul class="list">
+                    <li class="fragment">Create an account</li>
+                    <li class="fragment">Buy a domain and hosting plan</li>
+                    <li class="fragment">My Account</li>
+                    <li class="fragment">Hosting Manager</li>
+                    <li class="fragment">Login</li>
+                    <li class="fragment">Click file manager (usually called cPanel)</li>
+                    <li class="fragment">Upload all html/css/js to the public_html folder</li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Checklists</div>
+                <ul class="list">
+                    <li>
+                        <a href="https://frontendchecklist.io/">front end checklist</a>
+                    </li>
+                    <li>
+                        <a href="https://humaan.com/checklist/">humaan</a>
+                    </li>
+                    <li>
+                        <a href="http://webdevchecklist.com/">webdevchecklist.com</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="detail-slide">
+                <div class="sub-title">Some extra validation</div>
+                <ul class="list">
+                    <li>
+                        <a href="https://validator.w3.org/">HTML Validator</a>
+                    </li>
+                    <li>
+                        <a href="http://jigsaw.w3.org/css-validator/">CSS Validator</a>
+                    </li>
+                    <li>
+                        <a href="https://developers.google.com/speed/pagespeed/insights/">Google page speed insights</a>
+                    </li>
+                    <li>
+                        <a href="https://testmysite.thinkwithgoogle.com/intl/en-us">Google Mobile Speed</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="topic" data-background-color="#FF8017">
+                <h1>Code along: Github pages</h1>
+                <h2>
+                    <a href="https://pages.github.com/">pages.github.com</a>
+                </h2>
+            </section>
+
+            <section class="topic" data-background-color="#F33938">
+                <h1>lab time: animations</h1>
+            </section>
+
+            <section class="topic" data-background-color="black">
+                <h1>Wrap up</h1>
+            </section>
+
+            <section class="topic" data-background-color="#FFD800">
+                <h1>Q & A</h1>
+            </section>
+
+            <section class="topic" data-background-color="black">
+                <h1>Feedback time</h1>
+                <a href="ga.co/fewd34syd">ga.co/fewd34syd</a>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
+            center: false,
+
+            transition: 'slide',
+            dependencies: [
+                { src: 'js/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
+
+    </script>
+</body>
+</body>
+
+</html>
