@@ -29,7 +29,7 @@
                 <div class="branding">
                     <img src="assets/general_assembly.png" />
                 </div>
-                <h1>Class 11: Functions</h1>
+                <h1>Class 12: Functions</h1>
                 <h2>Evan Wallace</h2>
                 <h3>Software Engineer - Leapdev</h3>
             </section>
@@ -205,154 +205,11 @@
                 <h1>CODE ALONG: Return functions</h1>
             </section>
 
-            <section class="topic" data-background-color="#1EC9C6">
-                <h1>Software engineering principles</h1>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">What are the principles?</div>
-                <ul class="list">
-                    <li class="fragment">
-                        <b>DRY</b> - Dont Repeat Yourself</li>
-                    <li class="fragment">
-                        <b>YAGNI</b> - You Ain't Gonna Need It</li>
-                    <li class="fragment">
-                        <b>KISS</b> - Keep It Super Simple</li>
-
-                    <li class="fragment">
-                        <b>Hint</b> - Talk about these in job interviews! It would score you bonus points with me</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">DRY</div>
-                <p class="normal">Principle aimed at reducing repetition</p>
-                <ul class="list">
-                    <li>"Every piece of knowledge should have a single, unambiguous representation in the system"</li>
-                    <li>Allows for easier modifications to code because it should only happen in one place</li>
-                    <li>Violations of this principle is called WET code (waste everyone's time, write everything twice)</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Identifying violations</div>
-                <ul class="list">
-                    <li>If you copy and pasted a block of code, its probably violating the DRY principle</li>
-                    <li>If you do a modification to the system and it involves replacing the same parts of code in multiple files.
-                        Its probably a violation</li>
-                    <li>If a modification is visible in one part of the system but not in another (when expected). There has
-                        probably been a violation</li>
-                </ul>
-            </section>
-
-            <section class="topic" data-background-color="#FF8017">
-                <h1>CODE ALONG: DRY functions</h1>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">YAGNI</div>
-                <p class="normal">Basically, dont write code until its planned, budgeted and required</p>
-                <ul class="list">
-                    <li class="fragment">Writing code that will never be used sucks!</li>
-                    <li class="fragment">Writing code and finding out it's not needed sucks!</li>
-                    <li class="fragment">Writing code and finding out a client doesn't want it sucks!!</li>
-                    <li class="fragment">Wasting 8 months on a data migration process for corporate to scrap the idea.. SUCKS!!</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">KISS</div>
-                <p class="normal">Make functions easy to read by reducing their complexity</p>
-                <ul class="list">
-                    <li>Everyone function should do one thing and one thing well!</li>
-                    <li>Makes naming things easier if nothing else</li>
-                    <li>Makes code more testable (something you will have to worry about in the future)</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Identifying violations</div>
-                <ul class="list">
-                    <li>A function has too many lines (I try for under 30)</li>
-                    <li>Its hard to name a function, that generally means its doing more than one thing and needs a complicated
-                        name</li>
-                    <li>It takes more than 5 minutes to understand what its doing (this one is pretty subjective)</li>
-                </ul>
-            </section>
-
-            <section class="topic" data-background-color="#FF8017">
-                <h1>CODE ALONG: KISS functions</h1>
-            </section>
-
             <section class="topic" data-background-color="#FF8017">
                 <h1>EXERCISE: Cash Register</h1>
-                <h2>Codepen.io/evkw - Cash Register</h2>
+                <h2><a href="https://codepen.io/evkw/pen/aqWKja">Codepen.io/evkw - Cash Register</a></h2>
             </section>
 
-            <section class="topic" data-background-color="#1EC9C6">
-                <h1>Anonymous functions</h1>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Anonymous Functions</div>
-                <ul class="list">
-                    <li>A function without a name</li>
-                    <li>Can be used to execute code as soon as its loaded</li>
-                    <li>Can also be used to encapsulate a block of code so it is not visible to other blocks of code</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">Anonymous Function</div>
-                <pre><code class="hljs">
-            // Named function
-            function hello() {
-                console.log("hello");
-            }
-            hello();
-
-            // Anonymous function assigned to the hello variable
-            var hello = function() {
-                console.log("hello");
-            }
-            hello();
-        
-        </code></pre>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">IIFE</div>
-                <ul class="list">
-                    <li>Immediately-invoked function expression</li>
-                    <li>A very important anonymous method</li>
-                    <li>Runs as soon as it is defined</li>
-                    <li>Variables within the expression can not be accessed from outside</li>
-                </ul>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">IIFE Uses</div>
-                <pre><code class="hljs">
-            (function () { 
-                var name = "Evan Wallace";
-            })();
-
-            console.log(name); // Throws an error
-        
-        </code></pre>
-            </section>
-
-            <section class="detail-slide">
-                <div class="sub-title">IIFE Uses</div>
-                <pre><code class="hljs">
-        (function () { 
-            doPageLoadLogic();
-            callServer();
-            updateStylesViaJS();
-        })();
-            
-            </code></pre>
-            </section>
 
             <section class="topic" data-background-color="#F33938">
                 <h1>lab time: function exercises</h1>
